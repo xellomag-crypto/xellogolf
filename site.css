@@ -181,3 +181,41 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .menu nav{max-width:520px;width:100%;margin:auto}
   .menu .other,.menu .legal{max-width:520px;width:100%;margin-left:auto;margin-right:auto}
 }
+
+/* ---------- Desktop: die Golf-Startseite als Doppelseiten ---------- */
+.d-only{display:none}
+@media (min-width:1024px){
+  .flow .col,.orig .o-grid{max-width:1240px}
+  .flow .piece{padding-top:150px}
+  .d-only{display:inline-block}
+  /* People: Bild links, Text rechts unten wie eine Bildseite mit Spalte */
+  .d-split{display:grid;grid-template-columns:7fr 5fr;column-gap:64px;align-items:end}
+  .d-split .head{grid-column:1/-1}
+  .d-split .full{aspect-ratio:4/5}
+  .d-split .txt{padding-bottom:8px}
+  .d-split h2{font-size:clamp(44px,4.4vw,64px);margin-top:0}
+  /* Places: Panorama über die ganze Breite, Satz mittig */
+  .flow .p-place .full{aspect-ratio:21/9}
+  .flow .p-place blockquote{text-align:center;font-size:clamp(28px,2.6vw,38px);max-width:none;margin-top:40px}
+  /* Stories und Still: zwei Seiten nebeneinander, versetzt */
+  .spread{display:grid;grid-template-columns:1fr 1fr;column-gap:64px;align-items:start}
+  .spread .p-inset{display:block}
+  .spread .p-inset .full{aspect-ratio:4/5}
+  .spread .p-inset h2{margin-top:26px;font-size:clamp(36px,3.4vw,50px)}
+  .spread .p-still{margin-top:220px}
+  .spread .p-still .full{aspect-ratio:4/5}
+  .spread .p-still .line{text-align:left}
+  .spread .p-still .meta{text-align:left}
+  /* Originals: Film groß links, Zitat rechts */
+  .orig{padding:110px 0 120px}
+  .o-grid{display:grid;grid-template-columns:8fr 4fr;grid-template-areas:"h h" "m t";column-gap:56px;align-items:end}
+  .o-head{grid-area:h}
+  .o-head h2{font-size:clamp(48px,4.6vw,68px);margin-bottom:40px}
+  .o-media{grid-area:m;margin:0!important;aspect-ratio:16/10}
+  .o-text{grid-area:t;padding-bottom:6px}
+  .o-text q{margin-top:0;font-size:clamp(24px,2vw,30px)}
+  .o-text .more{margin-top:28px}
+  /* zweites Porträt klein und rechts, wie ein Nachklang */
+  .d-late{width:42%;margin-left:auto}
+  .flow .door{margin-top:150px}
+}
