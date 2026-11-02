@@ -300,3 +300,12 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 
 .voice .cut.frame{aspect-ratio:3/4;overflow:hidden;background:#1d1c19}
 .voice .cut.frame img{height:100%}
+
+p.where{display:block;text-align:center;font-style:italic;font-size:clamp(20px,5.4vw,26px);line-height:1.4;max-width:none;border-top:1px solid rgba(8,45,37,.2);padding-top:28px;margin:48px 0 30px}
+p.where .lab{display:block;font-style:normal;margin-bottom:10px}
+@media (min-width:860px){p.where{display:block}}
+@media (max-width:859px){
+  .voice{grid-template-columns:1fr;gap:22px}
+  .voice .cut{width:62%}
+  .voice .cut.frame{width:62%}
+}
