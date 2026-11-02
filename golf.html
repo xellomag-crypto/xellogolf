@@ -30,9 +30,9 @@
   <article class="piece"><div class="head"><a class="lab" href="golf/stories.html">Stories</a></div>
     <div class="p-inset"><a class="full" href="golf/stories/ralf-borchert.html"><img src="img/golf-greenkeeper.jpg" alt="Greenkeeper sitzt auf seinem Mäher auf dem Fairway, Bäume im Morgenlicht" style="object-position:55% 40%"></a>
     <div><h2>Moments that stay.</h2><p class="cap">Ralf Borchert. Greenkeeper.</p><a class="more" href="golf/stories/ralf-borchert.html">Lesen</a></div></div></article>
-  <article class="piece p-still"><div class="head"><a class="lab" href="golf/still.html">Still</a></div>
-    <a class="full" href="golf/still.html"><img src="img/mist.jpg" alt="Dichter Morgennebel über dem Golfplatz, Bäume kaum zu sehen" style="object-position:66% 50%"></a>
-    <p class="line">Nothing happens here.</p><p class="meta lab">[Ort] · [Uhrzeit]</p></article>
+  <article class="piece p-still is-video"><div class="head"><a class="lab" href="golf/still.html">Still</a></div>
+    <span class="full vwrap"><video class="vstill" src="video/golf-still-nebel.mp4" poster="img/golf-still-nebel.jpg" muted loop playsinline preload="metadata" aria-label="Nebel über dem Wasser, Bäume spiegeln sich. The place doesn't speak."></video><button class="vsound" type="button" aria-pressed="false">Ton</button></span>
+    <p class="meta lab">[Ort] · 08:19</p></article>
   </div>
 </div></main>
 <section class="orig" aria-label="Originals"><div class="wrap"><div class="col o-grid">
@@ -64,6 +64,9 @@
   b.addEventListener("click",function(){set(true)});
   m.querySelectorAll("[data-close]").forEach(function(e){e.addEventListener("click",function(){set(false)})});
   document.addEventListener("keydown",function(e){if(e.key==="Escape")set(false)});
+  var vs=document.querySelectorAll(".vstill"),rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(vs.length&&"IntersectionObserver" in window&&!rm){var vo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=e.target.play();if(p&&p.catch)p.catch(function(){})}else e.target.pause()})},{threshold:.35});vs.forEach(function(v){vo.observe(v)})}
+  document.querySelectorAll(".vsound").forEach(function(btn){btn.addEventListener("click",function(){var v=btn.parentNode.querySelector("video");v.muted=!v.muted;btn.setAttribute("aria-pressed",!v.muted);btn.textContent=v.muted?"Ton":"Ton aus";if(!v.muted){var p=v.play();if(p&&p.catch)p.catch(function(){})}})});
   if(cov){var upd=function(){bar.classList.toggle("over",cov.getBoundingClientRect().bottom>70)};window.addEventListener("scroll",upd,{passive:true});upd()}
 })();
 </script>
