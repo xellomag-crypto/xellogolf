@@ -251,3 +251,19 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
   .st-body{padding-top:70px}
   .st-quote{margin:70px -80px;padding:44px 80px}
 }
+
+.st-inline{margin:44px calc(-1 * var(--gr)) 44px calc(-1 * var(--gl));aspect-ratio:4/5;overflow:hidden;background:#1d1c19}
+@media (min-width:860px){.st-inline{margin:60px -120px;aspect-ratio:16/9}}
+
+/* Hochkant-Film: Standbild mit Play, öffnet schwarz über den ganzen Bildschirm */
+.vfilm{position:relative;margin:48px auto;max-width:420px;aspect-ratio:9/16;overflow:hidden;background:var(--ink)}
+.vfilm img{opacity:.92}
+.vfilm .vplay{position:absolute;inset:0;width:100%}
+.vfilm figcaption{position:absolute;left:18px;right:18px;bottom:16px;display:flex;justify-content:space-between;align-items:baseline;color:var(--paper)}
+.vfilm figcaption .cap{color:rgba(245,243,237,.85);margin:0;font-size:14px}
+.vfilm::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,5,5,0) 60%,rgba(5,5,5,.6) 100%)}
+.vfilm.soon figcaption .cap::after{content:" · Film folgt"}
+.vlayer{position:fixed;inset:0;z-index:80;background:var(--ink);display:grid;place-items:center}
+.vlayer[hidden]{display:none}
+.vlayer video{max-height:100svh;max-width:100%;aspect-ratio:9/16;background:var(--ink)}
+.vclose{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:var(--gr);z-index:2;color:var(--paper);font-size:13px;opacity:.8}
