@@ -278,3 +278,22 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 @media (min-width:1024px){.spread .p-still.is-video .vwrap{width:82%}.spread .p-still.is-video .meta{text-align:left}}
 .p-still .vwrap,.item .vwrap,.item.lead .vwrap{aspect-ratio:9/16}
 .item.lead.is-video .vwrap{margin-left:auto;margin-right:auto}
+
+/* Places-Seite: Stimme mit freigestelltem Porträt, Ortsangaben */
+.st-hero.wide{aspect-ratio:4/5}
+.st-hero.wide img{object-position:52% 60%}
+.voice{display:grid;grid-template-columns:5fr 6fr;gap:18px;align-items:end;margin:40px 0}
+.voice .cut{margin:0}
+.voice .cut img{height:auto}
+.voice .st-quote{margin:0;padding:20px 0}
+.voice .st-quote q{font-size:clamp(22px,6vw,34px)}
+.st-inline.tall{aspect-ratio:9/16;max-width:480px;margin-left:auto;margin-right:auto}
+.where{margin:48px 0 30px;display:grid;gap:18px;border-top:1px solid rgba(8,45,37,.2);padding-top:24px}
+.where dt{margin-bottom:4px}
+.where dd{margin:0;font-size:17px;line-height:1.55}
+@media (min-width:860px){
+  .st-hero.wide{aspect-ratio:21/9}
+  .voice{grid-template-columns:4fr 5fr;gap:48px;margin:70px -60px}
+  .st-inline.tall{margin:60px auto}
+  .where{grid-template-columns:1fr 1fr;gap:40px}
+}
