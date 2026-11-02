@@ -319,3 +319,10 @@ p.where{border-top:0;margin:22px 0 0;padding-top:0}
 .voice2 q{display:block;font-style:italic;font-weight:300;font-size:clamp(23px,6.2vw,42px);line-height:1.3;quotes:"„" "“";text-wrap:balance}
 .voice2 cite{display:block;margin-top:24px;font-style:normal;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--grey)}
 @media (min-width:860px){.voice2{padding:150px 0 160px}.voice2 .round{max-width:240px}}
+/* Cover-Feinschliff: Titel höher, Menü weiß, Leitsatz lesbar */
+.cover .mast{top:calc(34px + env(safe-area-inset-top,0px))}
+.cover .mast .tag{font-size:clamp(22px,6.2vw,30px);margin-top:14px;opacity:1;font-weight:400;text-shadow:0 1px 14px rgba(5,5,5,.45),0 0 2px rgba(5,5,5,.25)}
+.cover .mast .room{text-shadow:0 1px 10px rgba(5,5,5,.4)}
+.bar.over .burger{opacity:1;color:#fff;filter:drop-shadow(0 1px 4px rgba(5,5,5,.45))}
+.bar.over .burger i{height:1.5px}
+@media (min-width:860px){.cover .mast{top:44px}.cover .mast .tag{font-size:26px}}
