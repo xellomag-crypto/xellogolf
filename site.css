@@ -309,3 +309,13 @@ p.where .lab{display:block;font-style:normal;margin-bottom:10px}
   .voice .cut{width:62%}
   .voice .cut.frame{width:62%}
 }
+
+/* Places: Ort direkt unter dem Bild, darunter rundes Porträt und der Satz mit viel Luft */
+.st-head + .st-hero.wide + .wrap .st-body{padding-top:0}
+p.where{border-top:0;margin:22px 0 0;padding-top:0}
+.voice2{text-align:center;padding:110px 0 120px}
+.voice2 .round{width:44%;max-width:220px;aspect-ratio:1;height:auto;border-radius:50%;object-fit:cover;margin:0 auto 46px}
+.voice2 blockquote{margin:0;color:var(--green)}
+.voice2 q{display:block;font-style:italic;font-weight:300;font-size:clamp(23px,6.2vw,42px);line-height:1.3;quotes:"„" "“";text-wrap:balance}
+.voice2 cite{display:block;margin-top:24px;font-style:normal;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--grey)}
+@media (min-width:860px){.voice2{padding:150px 0 160px}.voice2 .round{max-width:240px}}
