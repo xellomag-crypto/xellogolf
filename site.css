@@ -400,3 +400,10 @@ body.dark .bar.clean{background:transparent}
 a.fp-btn{text-decoration:none}
 body.dark .door .name .w{color:var(--paper)}
 @media (min-width:860px){.bill-media{margin:0;aspect-ratio:21/9}a.fp-btn{display:inline-flex;width:auto;padding:15px 34px}}
+/* Originals-Übersicht: nur Bild, Titel, Länge */
+.bill{margin-top:0}
+body.dark .list{margin-top:28px;padding-top:0}
+.bill-t{display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:18px;color:var(--paper);text-decoration:none}
+.bill-t h2{font-size:clamp(30px,8.4vw,48px)}
+.bill-t .fp-meta{margin:0;white-space:nowrap;font-size:13px}
+html:has(body.dark){background:var(--green)}
