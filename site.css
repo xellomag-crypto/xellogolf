@@ -451,3 +451,7 @@ body.dark .toc a[aria-current]{color:var(--paper)}
 body.dark .toc{margin-top:120px}@media (min-width:860px){body.dark .toc{margin-top:140px}}
 .g-sig{color:#6f6b64}
 .sm-kick{color:#6f6b64}
+/* Signatur folgt dem Text: links bei Geschichten, mittig bei Orten */
+.st-sign{text-align:left}
+.st-body:has(.voice2) .st-sign{text-align:center}
+.st-quote cite,.voice2 cite{color:#6f6b64}
