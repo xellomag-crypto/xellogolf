@@ -23,7 +23,6 @@
     <p class="fp-kick"><a href="../../golf/originals.html">Ein Xello-Film</a></p>
     <h1>Das Fundament</h1>
     <p class="fp-meta">2026<span>|</span>2:49 Min.<span>|</span>Dokumentation<span>|</span>Emotional</p>
-    <button class="fp-btn" type="button"><span class="tri" aria-hidden="true"></span><span class="t">Film ansehen</span></button>
     <p class="fp-desc">Ein Portrait über Vaterstolz, das Loslassen und das Weitergeben eines Traums an die nächste Generation. Begleiten Sie Jörg auf seinem Weg vom aktiven Spieler zum wichtigsten Begleiter seines Sohnes.</p>
     <blockquote class="fp-quote"><q>Wenn die Längen auf dem Platz schwinden, beginnt das wichtigste Spiel des Lebens.</q></blockquote>
     <a class="door" href="../../golf.html"><span class="name"><span>xello golf</span></span><span class="s">Between the shots.</span></a>
@@ -32,12 +31,12 @@
 <div class="vlayer wide" id="vlayer" hidden><button class="vclose" type="button">Schließen</button><div class="vframe"></div></div>
 <script>
 (function(){
-  var h=document.querySelector('.fp-hero'),L=document.getElementById('vlayer'),box=L.querySelector('.vframe'),btn=document.querySelector('.fp-btn');
+  var h=document.querySelector('.fp-hero'),L=document.getElementById('vlayer'),box=L.querySelector('.vframe');
   function go(){var id=h.getAttribute('data-vimeo');
-    if(!id){btn.classList.add('soon');btn.querySelector('.t').textContent='Film folgt';return}
+    if(!id)return;
     box.innerHTML='<iframe src="https://player.vimeo.com/video/'+id+'?autoplay=1&title=0&byline=0&portrait=0&dnt=1&color=F5F3ED" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Das Fundament"></iframe>';
     L.hidden=false;document.body.style.overflow='hidden'}
-  h.querySelector('.fp-big').addEventListener('click',go);btn.addEventListener('click',go);
+  h.querySelector('.fp-big').addEventListener('click',go);
   L.querySelector('.vclose').addEventListener('click',function(){box.innerHTML='';L.hidden=true;document.body.style.overflow=''});
 })();
 </script>
