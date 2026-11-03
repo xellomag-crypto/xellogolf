@@ -351,3 +351,32 @@ p.where{border-top:0;margin:22px 0 0;padding-top:0}
 .st-sign{text-align:center}
 .sub-mast .sm-x svg{width:42px}
 @media (min-width:860px){.sub-mast .sm-x svg{width:50px}}
+/* Originals: Filmseite (schwarz, wie ein Streaming-Titel) */
+body.dark{background:var(--ink);color:var(--paper)}
+body.dark .bar{background:rgba(5,5,5,.88);color:var(--paper)}
+body.dark .bar .side{color:rgba(245,243,237,.6)}
+.film-page{padding-top:calc(58px + env(safe-area-inset-top,0px))}
+.fp-hero{position:relative;margin:0;aspect-ratio:16/10;overflow:hidden;background:#111}
+.fp-hero img{width:100%;height:100%;object-fit:cover;opacity:.9}
+.fp-hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(5,5,5,.15) 0%,rgba(5,5,5,0) 40%,rgba(5,5,5,.85) 100%)}
+.fp-big{position:absolute;inset:0;z-index:2;width:100%;background:none;border:0;cursor:pointer}
+.fp-body{padding-top:30px}
+.fp-kick{margin:0 0 14px;font-size:11.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--grey)}
+.fp-kick a{color:inherit;text-decoration:none}
+.film-page h1{margin:0;font-weight:400;font-style:italic;font-size:clamp(44px,12.5vw,84px);line-height:1.02;letter-spacing:-.01em}
+.fp-meta{margin:16px 0 0;font-size:14px;letter-spacing:.06em;color:rgba(245,243,237,.62)}
+.fp-meta span{margin:0 .7em;color:rgba(245,243,237,.35)}
+.fp-btn{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;margin:28px 0 0;padding:16px 20px;background:var(--paper);color:var(--ink);border:0;font:inherit;font-size:14px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.fp-btn .tri{border-left:10px solid var(--ink);border-top:6px solid transparent;border-bottom:6px solid transparent}
+.fp-btn.soon{background:transparent;color:var(--paper);border:1px solid rgba(245,243,237,.35)}
+.fp-btn.soon .tri{display:none}
+.fp-desc{margin:30px 0 0;font-size:18px;line-height:1.6;color:rgba(245,243,237,.86);max-width:32em}
+.fp-quote{margin:48px 0 0;padding:28px 0 0;border-top:1px solid rgba(245,243,237,.18)}
+.fp-quote q{display:block;font-style:italic;font-size:clamp(22px,6vw,30px);line-height:1.38;quotes:"„" "“"}
+body.dark .door{color:var(--paper);border-color:rgba(245,243,237,.22)}
+body.dark .foot{margin-top:96px}
+@media (min-width:860px){
+  .fp-hero{aspect-ratio:21/9;max-width:1240px;margin:0 auto}
+  .fp-body{max-width:760px}
+  .fp-btn{width:auto;display:inline-flex;padding:15px 34px}
+}
