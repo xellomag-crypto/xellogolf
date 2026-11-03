@@ -449,3 +449,5 @@ body.dark .toc a{color:rgba(245,243,237,.45)}
 body.dark .toc a[aria-current]{color:var(--paper)}
 @media (min-width:860px){.toc{max-width:760px;margin:0 auto}}
 body.dark .toc{margin-top:120px}@media (min-width:860px){body.dark .toc{margin-top:140px}}
+.g-sig{color:#6f6b64}
+.sm-kick{color:#6f6b64}
