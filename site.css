@@ -348,3 +348,6 @@ p.where{border-top:0;margin:22px 0 0;padding-top:0}
 @media (min-width:860px){.sub-mast{padding-top:56px;padding-bottom:56px}.sub-mast .sm-x svg{width:72px}}
 .sub-mast h1{font-weight:400}
 .sub-mast .sm-kick{color:#7d7a73}
+.st-sign{text-align:center}
+.sub-mast .sm-x svg{width:42px}
+@media (min-width:860px){.sub-mast .sm-x svg{width:50px}}
