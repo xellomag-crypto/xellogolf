@@ -436,3 +436,6 @@ html:has(body.dark){background:var(--green)}
 .sub-mast h1.thought{font-size:clamp(40px,11.5vw,72px);max-width:11em}
 .sub-mast:has(h1.thought){padding-bottom:44px}
 body.dark .sub-mast .sm-kick{color:rgba(245,243,237,.5)}
+/* Gedanken leiser */
+.sub-mast h1.thought{font-weight:300;font-size:clamp(28px,7.6vw,44px);line-height:1.2;color:#2a2a28;max-width:13em}
+body.dark .sub-mast h1.thought{color:rgba(245,243,237,.9)}
