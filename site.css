@@ -485,3 +485,8 @@ body.dark .toc{margin-top:120px}@media (min-width:860px){body.dark .toc{margin-t
 .lg-link{font-size:14px;margin-top:6px!important}
 .fp-note{margin:18px 0 0;font-size:13px;color:rgba(245,243,237,.5)}
 .fp-note a{color:inherit;border-bottom:1px solid rgba(245,243,237,.3);text-decoration:none}
+.lg-crew{margin-top:0;border-top:0;padding-top:4px}
+.lg-crew dt:first-child{margin-top:0}
+.door.crew .name span{font-size:13px!important;letter-spacing:.26em;text-transform:uppercase}
+.door.crew .s{white-space:nowrap}
+@media (max-width:599px){.door.crew{flex-direction:column;align-items:flex-start;gap:10px}}
