@@ -497,3 +497,11 @@ body.dark .toc{margin-top:120px}@media (min-width:860px){body.dark .toc{margin-t
 .foot nav .crew{font-style:italic}
 .foot nav .crew{flex-basis:100%;margin-bottom:6px;font-size:16px}
 .foot nav .crew + span{display:none}
+
+/* ---------- Objects ---------- */
+body.objects .g-img{background:var(--ink);aspect-ratio:1/1}
+body.objects .g-line{color:rgba(245,243,237,.9);font-size:clamp(26px,7vw,40px)}
+body.objects .g-sig a{color:rgba(245,243,237,.5);text-decoration:none}
+body.objects .g-sig a:hover{color:var(--paper)}
+.obj-name{margin:48px 0 0;text-align:center;font-size:11px;letter-spacing:.38em;margin-right:-.38em;text-transform:uppercase;color:rgba(245,243,237,.55)}
+@media (min-width:860px){body.objects .g-img{max-width:640px;aspect-ratio:4/3}}
