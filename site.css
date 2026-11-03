@@ -329,3 +329,22 @@ p.where{border-top:0;margin:22px 0 0;padding-top:0}
 /* Leitsatz: kräftiger, mit weichem Schein für hellen Himmel */
 .cover .mast .tag{font-weight:500;letter-spacing:.005em;text-shadow:0 0 18px rgba(5,5,5,.6),0 1px 6px rgba(5,5,5,.55),0 0 1px rgba(5,5,5,.5)}
 .cover .mast .room{font-weight:500;text-shadow:0 0 12px rgba(5,5,5,.6),0 1px 3px rgba(5,5,5,.5)}
+/* Unterseiten-Kopf: X, Linie, Ort, Titel (wie Magazin-Aufmacher) */
+.bar.clean{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+.bar.clean .center,.bar.clean .side.l{opacity:0;pointer-events:none}
+.bar.clean .burger i{height:1.5px}
+.sub-mast{text-align:center;padding:calc(40px + env(safe-area-inset-top,0px)) var(--gr) 42px var(--gl);color:var(--ink)}
+.sub-mast .sm-x{display:inline-block;color:var(--green)}
+.sub-mast .sm-x svg{display:block;width:60px;height:auto}
+.sub-mast .sm-line{margin:18px 0 0;font-size:15px;letter-spacing:.32em;margin-right:-.32em;text-transform:lowercase;color:var(--ink)}
+.sub-mast .sm-line a{color:inherit;text-decoration:none}
+.sub-mast .sm-line .dot{margin:0 .5em}
+.sub-mast .sm-rule{display:block;width:48px;height:1px;background:var(--green);margin:30px auto 32px;opacity:.7}
+.sub-mast .sm-kick{margin:0 0 20px;font-size:12px;letter-spacing:.38em;margin-right:-.38em;text-transform:uppercase;color:var(--grey)}
+.sub-mast h1{margin:0 auto;font-weight:300;font-style:italic;font-size:clamp(42px,12vw,76px);line-height:1.04;letter-spacing:-.01em;max-width:13em;text-wrap:balance;color:var(--ink)}
+.sub-mast .sm-sub{margin:14px auto 0;font-size:clamp(18px,5vw,22px);color:var(--soft);max-width:24em;text-wrap:balance}
+.sub-mast + .st-hero,.sub-mast + .st-hero.wide{margin-top:0}
+.sub-mast + .wrap .center-tabs,.center-tabs{justify-content:center;margin-top:0}
+@media (min-width:860px){.sub-mast{padding-top:56px;padding-bottom:56px}.sub-mast .sm-x svg{width:72px}}
+.sub-mast h1{font-weight:400}
+.sub-mast .sm-kick{color:#7d7a73}
