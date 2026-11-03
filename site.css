@@ -512,3 +512,15 @@ body.objects .g-sig a:hover{color:var(--paper)}
 .obj-info a:hover,.obj-info a:focus-visible{color:var(--paper)}
 .obj-collab{margin:8px 0 0;text-align:center;font-size:10.5px;letter-spacing:.22em;padding-left:.22em;text-transform:uppercase;color:rgba(245,243,237,.38)}
 body.objects .g-piece:last-child{margin-bottom:60px}
+/* Objects: Luft. Jedes Objekt steht allein im Schwarz (3. November 2026) */
+body.objects .list.gallery{padding-top:clamp(60px,16vw,120px)}
+body.objects .g-img{width:84%;margin:0 auto}
+body.objects .obj-name{margin-top:clamp(88px,24vw,140px)}
+body.objects .g-piece{margin-bottom:clamp(300px,90vw,460px)}
+body.objects .g-piece:last-child{margin-bottom:160px}
+@media (min-width:860px){
+  body.objects .g-img{width:auto;max-width:560px}
+  body.objects .obj-name{margin-top:150px}
+  body.objects .g-piece{margin-bottom:560px}
+  body.objects .g-piece:last-child{margin-bottom:220px}
+}
