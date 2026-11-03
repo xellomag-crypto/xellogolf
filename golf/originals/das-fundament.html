@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Das Fundament · Originals · xello golf</title>
 <meta name="theme-color" content="#082D25">
-<link rel="stylesheet" href="../../site.css?v=bdae0cf6">
+<link rel="stylesheet" href="../../site.css?v=5c41aa3a">
 
 </head>
 <body class="dark">
@@ -15,7 +15,7 @@
   <span class="side r"><button class="burger" type="button" aria-label="Menü öffnen" aria-controls="menu" aria-expanded="false" data-open><i></i><i></i></button></span>
 </header>
 <article class="film-page">
-  <figure class="fp-hero" data-src="">
+  <figure class="fp-hero" data-vimeo="1171712868">
     <img src="../../img/hands.jpg" alt="Zwei Hände am Schlägergriff, eine im weißen Golfhandschuh" style="object-position:50% 45%">
     <button class="fp-big" type="button" aria-label="Film ansehen: Das Fundament"><span class="play" aria-hidden="true"></span></button>
   </figure>
@@ -29,15 +29,16 @@
     <a class="door" href="../../golf/originals.html"><span class="name"><span>Originals</span></span><span class="s">Die langen Filme.</span></a>
   </div></div>
 </article>
-<div class="vlayer" id="vlayer" hidden><button class="vclose" type="button">Schließen</button><video playsinline controls preload="none"></video></div>
+<div class="vlayer wide" id="vlayer" hidden><button class="vclose" type="button">Schließen</button><div class="vframe"></div></div>
 <script>
 (function(){
-  var h=document.querySelector('.fp-hero'),L=document.getElementById('vlayer'),v=L.querySelector('video'),btn=document.querySelector('.fp-btn');
-  function go(){var s=h.getAttribute('data-src');
-    if(!s){btn.classList.add('soon');btn.querySelector('.t').textContent='Film folgt';return}
-    v.src=s;L.hidden=false;document.body.style.overflow='hidden';try{v.play()}catch(e){}}
+  var h=document.querySelector('.fp-hero'),L=document.getElementById('vlayer'),box=L.querySelector('.vframe'),btn=document.querySelector('.fp-btn');
+  function go(){var id=h.getAttribute('data-vimeo');
+    if(!id){btn.classList.add('soon');btn.querySelector('.t').textContent='Film folgt';return}
+    box.innerHTML='<iframe src="https://player.vimeo.com/video/'+id+'?autoplay=1&title=0&byline=0&portrait=0&dnt=1&color=F5F3ED" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Das Fundament"></iframe>';
+    L.hidden=false;document.body.style.overflow='hidden'}
   h.querySelector('.fp-big').addEventListener('click',go);btn.addEventListener('click',go);
-  L.querySelector('.vclose').addEventListener('click',function(){v.pause();L.hidden=true;document.body.style.overflow=''});
+  L.querySelector('.vclose').addEventListener('click',function(){box.innerHTML='';L.hidden=true;document.body.style.overflow=''});
 })();
 </script>
 <footer class="foot" id="kontakt">
