@@ -457,12 +457,8 @@ body.dark .toc{margin-top:120px}@media (min-width:860px){body.dark .toc{margin-t
 .st-quote cite,.voice2 cite{color:#6f6b64}
 .vfilm::after{display:none}
 
-/* Abspann: Bildquelle unter der Signatur, dezent, Link ohne Unterstrich */
-.st-sign:has(+ .credit){margin-bottom:10px}
-.st-body p.credit{margin-bottom:44px;font-size:10.5px;letter-spacing:.26em;text-transform:uppercase;color:#6f6b64}
-.credit a{color:inherit;text-decoration:none;transition:color .2s}
-.credit a:hover,.credit a:focus-visible{color:var(--green)}
-.credit{text-align:left}
-.st-body:has(.voice2) .credit{text-align:center}
-.st-body:has(.voice2) .st-sign,.st-body:has(.voice2) .credit{margin-left:auto;margin-right:auto}
-.st-body p.credit{max-width:none}
+/* Signatur mit Ort: "Ein Xello-Ort. — Golf Maioris", gleiche Größe, Link ohne Unterstrich */
+.st-sign .sep{display:inline-block;width:18px;height:1px;background:currentColor;opacity:.5;vertical-align:middle;margin:0 12px 2px}
+.st-sign .place-link{color:inherit;text-decoration:none;transition:color .2s}
+.st-sign .place-link:hover,.st-sign .place-link:focus-visible{color:var(--green)}
+.st-body:has(.voice2) .st-sign{margin-left:auto;margin-right:auto}
