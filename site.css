@@ -382,3 +382,21 @@ body.dark .foot{margin-top:96px}
 }
 .vlayer .vframe{width:100%;max-width:min(100vw,177.78svh);aspect-ratio:16/9}
 .vlayer .vframe iframe{display:block;width:100%;height:100%;border:0}
+/* Originals-Übersicht schwarz, Film als großer Aufmacher */
+body.dark .sub-mast,body.dark .sub-mast h1,body.dark .sub-mast .sm-line{color:var(--paper)}
+body.dark .sub-mast .sm-x{color:var(--paper)}
+body.dark .sub-mast .sm-rule{background:var(--paper);opacity:.45}
+body.dark .rub-tabs{border-color:rgba(245,243,237,.18)}
+body.dark .rub-tabs a{color:rgba(245,243,237,.45)}
+body.dark .rub-tabs a[aria-current]{color:var(--paper);border-color:var(--paper)}
+body.dark .bar.clean{background:transparent}
+.bill{margin-top:40px}
+.bill-media{position:relative;display:block;aspect-ratio:16/10;overflow:hidden;margin:0 calc(-1 * var(--gr)) 0 calc(-1 * var(--gl));background:#111}
+.bill-media img{width:100%;height:100%;object-fit:cover;opacity:.9}
+.bill-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,5,5,0) 45%,rgba(5,5,5,.8) 100%)}
+.bill-media .play{z-index:2}
+.bill .fp-kick{margin-top:26px}
+.bill h2{margin:0;font-weight:400;font-style:italic;font-size:clamp(40px,11vw,72px);line-height:1.04;color:var(--paper)}
+a.fp-btn{text-decoration:none}
+body.dark .door .name .w{color:var(--paper)}
+@media (min-width:860px){.bill-media{margin:0;aspect-ratio:21/9}a.fp-btn{display:inline-flex;width:auto;padding:15px 34px}}
