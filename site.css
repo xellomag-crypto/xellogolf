@@ -1067,3 +1067,15 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .sp-hint{font-style:italic;color:var(--soft)}
 }
 @media (min-width:860px){.sp-info{margin-top:18px!important;font-family:var(--sans);font-size:11.5px;letter-spacing:.08em;color:var(--soft)}.sp-info + .sp-sign{margin-top:6px!important}}
+
+/* Places-Doppelseite: künstlerisch, Stimme groß mit Rundbild (4. November 2026) */
+@media (min-width:860px){
+  .sp-text:has(.sp-stimme){flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:0}
+  .sp-stimme{display:grid;grid-template-columns:clamp(150px,13vw,190px) 1fr;gap:clamp(26px,2.6vw,40px);align-items:center;margin:40px 0}
+  .sp-stimme img{width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;box-shadow:0 2px 4px rgba(5,5,5,.08),0 16px 30px -14px rgba(5,5,5,.42)}
+  .sp-stimme blockquote{margin:0}
+  .sp-stimme q{display:block;font-style:italic;font-weight:300;font-size:clamp(24px,2.2vw,32px);line-height:1.28;color:var(--green);quotes:"„" "“";hyphens:manual;-webkit-hyphens:manual;text-wrap:balance}
+  .sp-stimme cite{display:block;margin-top:16px;font-style:normal;font-size:16px;color:var(--ink)}
+  .sp-nach{margin:0 0 6px!important;font-style:italic;font-size:17px;color:var(--soft)}
+  .sp-text:has(.sp-stimme) .sp-sign{margin-top:8px!important}
+}
