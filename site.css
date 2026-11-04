@@ -818,3 +818,46 @@ body.life .ph{background:#E6DCCD}
   body.life .bar.over .burger{color:var(--green);filter:none}
   body.life .cover + main{margin-top:40px}
 }
+
+/* Titelbild: Ausschnitt pro Beitrag, Köpfe bleiben im Bild (4. November 2026) */
+.st-hero.mz-hero img[style*="--mpos"]{object-position:var(--mpos)}
+@media (min-width:860px){.st-hero.mz-hero img[style*="--dpos"]{object-position:var(--dpos)}}
+
+/* Life am Desktop: Magazin-Layout für Startseite und Rubriken (4. November 2026) */
+@media (min-width:860px){
+  body.life .karten .col{max-width:1200px;display:grid;grid-template-columns:repeat(6,1fr);column-gap:48px}
+  body.life .karte{grid-column:span 2;margin-bottom:96px}
+  body.life .karte .k-bild.r32,body.life .karte .k-bild.r45{aspect-ratio:4/5}
+  body.life .karte .k-t{font-size:clamp(26px,2.3vw,34px)}
+  /* Aufmacher: Bild links, Text rechts */
+  body.life .karte:first-child{grid-column:1/-1;display:grid;grid-template-columns:7fr 5fr;grid-template-rows:auto auto auto auto 1fr auto;column-gap:56px}
+  body.life .karte:first-child .k-kopf{grid-column:1/-1}
+  body.life .karte:first-child .k-bild{grid-column:1;grid-row:2/7;aspect-ratio:3/2;margin-bottom:0}
+  body.life .karte:first-child .k-t{grid-column:2;grid-row:2;margin-top:14px;font-size:clamp(38px,3.6vw,56px)}
+  body.life .karte:first-child .k-sub{grid-column:2;grid-row:3}
+  body.life .karte:first-child .k-txt,body.life .karte:first-child .k-zit{grid-column:2;grid-row:4;font-size:20px}
+  body.life .karte:first-child .k-fuss{grid-column:2;grid-row:6}
+  /* Dunkle Doppelseite über die ganze Breite */
+  body.life .karte.dunkel{grid-column:1/-1;margin-left:calc(-1 * max(60px,(100vw - 1200px)/2));margin-right:calc(-1 * max(60px,(100vw - 1200px)/2));padding:56px max(60px,(100vw - 1200px)/2) 48px;display:grid;grid-template-columns:8fr 4fr;grid-template-rows:auto auto auto auto 1fr auto;column-gap:56px}
+  body.life .karte.dunkel .k-kopf{grid-column:1/-1}
+  body.life .karte.dunkel .k-bild{grid-column:1;grid-row:2/7;aspect-ratio:16/9;margin-bottom:0}
+  body.life .karte.dunkel .k-t{grid-column:2;grid-row:2;margin-top:14px;font-size:clamp(34px,3.2vw,50px)}
+  body.life .karte.dunkel .k-sub{grid-column:2;grid-row:3}
+  body.life .karte.dunkel .k-txt{grid-column:2;grid-row:4}
+  body.life .karte.dunkel .k-fuss{grid-column:2;grid-row:6}
+  /* Letzte Karte (Still) breit im Querformat */
+  body.life .karte:last-child{grid-column:2/6}
+  body.life .karte:last-child .k-bild{aspect-ratio:16/9}
+  /* Rubrik-Übersichten breiter */
+  body.life main.wrap > .col{max-width:1200px}
+  body.life .list{gap:72px 48px}
+  body.life .item.lead .full{aspect-ratio:2/1}
+  body.life .pair{gap:48px}
+  body.life .pair .item .full{aspect-ratio:4/5}
+  body.life .pair .item h2{font-size:clamp(26px,2.4vw,36px)}
+}
+/* Hochformat-Titelbild am Desktop: ganzes Bild, mittig auf Papier statt Anschnitt */
+@media (min-width:860px){
+  .st-hero.mz-hero.hoch{height:min(82vh,900px);background:transparent;display:flex;justify-content:center;padding-top:72px;box-sizing:border-box}
+  .st-hero.mz-hero.hoch img{width:auto;height:100%;max-width:none;object-fit:contain;box-shadow:0 18px 40px -18px rgba(5,5,5,.45)}
+}
