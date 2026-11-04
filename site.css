@@ -1403,3 +1403,4 @@ body.dark .bar:not(.over):not(.clean){background:rgba(8,8,8,.94);box-shadow:0 1p
 .fp-quote q{font-weight:300;font-size:clamp(20px,5.4vw,26px);color:rgba(245,243,237,.95)}
 @media (min-width:860px){.bill-t h2{font-size:clamp(30px,2.6vw,40px)!important}.film-page h1{font-size:clamp(44px,3.8vw,58px)}}
 @media (min-width:860px){.list > .bill{grid-column:1/-1}.col:has(> .list > .bill){max-width:1200px}}
+.k-t.k-klein{font-size:clamp(22px,5.6vw,26px)!important}
