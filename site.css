@@ -1442,3 +1442,55 @@ body.dark .g-kick,body.objects .g-kick{color:rgba(245,243,237,.6)}
 .zum-film i{font-style:normal;font-family:var(--serif);letter-spacing:0;margin-left:.5em}
 .bill-media:hover .zum-film{background:rgba(10,10,10,.5)}
 .bill .g-kick.k1{text-align:left;margin:18px 0 0}
+
+/* ===== Entwurf Handy-Magazin (4. November 2026) ===== */
+/* Eine serifenlose Schrift: Barlow Condensed statt Helvetica */
+:root{--sans:'Barlow Condensed',Arial,sans-serif}
+.k-ort,.k-info,.sp-by,.sp-info,.mz-sk,.mz-cnt,.obj-info,.g-auf .by,.fp-meta{font-family:var(--narrow)!important;font-weight:300!important}
+.k-info,.sp-by,.sp-info,.mz-sk,.mz-cnt,.obj-info{font-size:13px!important;letter-spacing:.2em!important}
+.k-info,.sp-by,.sp-info,.mz-sk{text-transform:lowercase}
+
+/* Feine Zeilen kräftiger */
+.g-sig,.spreads .g-sig,.obj-info,.g-auf .by,.mz-blick dt:not(.h),.k-info,.sp-by{color:#4a4843!important}
+body.dark .g-sig,body.objects .obj-info,body.dark .obj-info{color:rgba(245,243,237,.8)!important}
+.foot nav a,.foot nav a:not(.crew),.foot nav .crew,.menu .legal a{color:rgba(245,243,237,.88)!important}
+.foot nav span,.menu .legal span{color:rgba(245,243,237,.5)!important}
+.foot .claim{color:rgba(245,243,237,.88)}
+.mz-nt .k,.story-page .mz-nt .k{color:rgba(245,243,237,.82)!important}
+
+/* Handy: Karten als Magazinseiten */
+@media (max-width:859px){
+  body.golf-home .karten .col,body.life .karten .col{padding-top:6px}
+  body.golf-home .karte:not(.dunkel),body.life .karte:not(.dunkel){background:#FCFBF7;margin:0 0 34px;padding:22px 20px 18px;box-shadow:0 1px 2px rgba(5,5,5,.06),0 16px 30px -18px rgba(5,5,5,.3)}
+  body.life .karte:not(.dunkel){background:#FBF8F2}
+  body.golf-home .karte:not(.dunkel) .k-kopf,body.life .karte:not(.dunkel) .k-kopf{justify-content:center}
+  body.golf-home .karte:not(.dunkel) .k-rub,body.life .karte:not(.dunkel) .k-rub{font-size:16px}
+  body.golf-home .karte:not(.dunkel) .k-ort:empty,body.life .karte:not(.dunkel) .k-ort:empty{display:none}
+  body.golf-home .karte:not(.dunkel) .k-bild,body.life .karte:not(.dunkel) .k-bild{margin:14px -20px 18px}
+  body.golf-home .karte:not(.dunkel) .k-t,body.life .karte:not(.dunkel) .k-t{font-size:clamp(26px,7vw,32px);text-align:center}
+  body.golf-home .karte:not(.dunkel) .k-sub,body.life .karte:not(.dunkel) .k-sub{text-align:center;font-size:15px}
+  body.golf-home .karte:not(.dunkel) .k-txt,body.life .karte:not(.dunkel) .k-txt{text-align:center;font-size:15.5px}
+  body.golf-home .karte:not(.dunkel) .k-zit,body.life .karte:not(.dunkel) .k-zit{text-align:center;font-size:17px}
+  body.golf-home .karte:not(.dunkel) .k-fuss,body.life .karte:not(.dunkel) .k-fuss{justify-content:center;margin-top:12px}
+  /* Aufmacher: Bild oben randlos über die ganze Seite */
+  body.golf-home main.karten .karte:first-child,body.life main.karten .karte:first-child{padding-top:0}
+  body.golf-home main.karten .karte:first-child .k-kopf,body.life main.karten .karte:first-child .k-kopf{order:2}
+  body.golf-home main.karten .karte:first-child,body.life main.karten .karte:first-child{display:flex;flex-direction:column}
+  body.golf-home main.karten .karte:first-child .k-bild,body.life main.karten .karte:first-child .k-bild{order:1;margin:0 -20px 18px;aspect-ratio:4/5}
+  body.golf-home main.karten .karte:first-child > :not(.k-bild):not(.k-kopf),body.life main.karten .karte:first-child > :not(.k-bild):not(.k-kopf){order:3}
+  .karte.dunkel{margin-bottom:34px}
+}
+
+/* Still: ganzseitige Bildseite, Uhrzeit klein */
+.list.gallery .g-vid{display:block}
+@media (max-width:859px){body:has(.g-vid) .list.gallery .g-piece .g-vid{margin:0 calc(-1 * var(--gr)) 0 calc(-1 * var(--gl))}}
+@media (min-width:860px){
+  body:has(.g-vid) .list.gallery{max-width:1000px}
+  body:has(.g-vid) .g-piece{background:#FCFBF7;padding:0 0 44px;box-shadow:0 1px 2px rgba(5,5,5,.06),0 24px 48px -26px rgba(5,5,5,.36)}
+  body:has(.g-vid) .g-piece .g-vid .vwrap{display:block;width:100%!important;max-width:none;aspect-ratio:16/10}
+  body:has(.g-vid) .g-piece .g-vid video{width:100%;height:100%;object-fit:cover}
+}
+
+/* Objects: jedes Objekt als eigene Seite mit feinem Rahmen */
+body.objects .g-piece.obj .g-img{box-sizing:border-box;border:10px solid #151515;box-shadow:0 0 0 1px rgba(245,243,237,.08),0 30px 60px -30px rgba(0,0,0,.8)}
+.o-media{position:relative}
