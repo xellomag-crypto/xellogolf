@@ -1349,3 +1349,14 @@ body.dark .bar:not(.over):not(.clean){background:rgba(8,8,8,.94);box-shadow:0 1p
   .h-lines b{display:block;font-weight:300;font-style:italic;font-size:max(19px,6cqw);line-height:1.15}
   .h-lines .l2 b{font-size:max(15px,4.2cqw)}
 }
+
+/* Titel kursiv, Kartenkopf ohne Linie, Weiterlesen ohne Strich, Stimme linksbündig (4. November 2026) */
+.k-t,.sp-t,.g-auf .t,.mz-nt .t,.story-page .mz-nt .t{font-style:italic}
+.k-kopf,body.life .k-kopf{border-top:0!important;padding-top:0}
+.mz-nt .go,.story-page .mz-nt .go{border-bottom:0!important;padding-bottom:0}
+@media (max-width:859px){
+  .voice2{text-align:left;justify-items:start}
+  .voice2 .round{margin-left:0;margin-right:0}
+  .voice2 blockquote,.voice2 q,.voice2 cite{text-align:left}
+}
+@media (max-width:859px){.voice2{padding:52px 0 64px}.voice2 .round{margin-bottom:30px;width:40%}}
