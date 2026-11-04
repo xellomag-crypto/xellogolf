@@ -1655,3 +1655,31 @@ body:not(.life) .mz-kopf .mz-by{margin:18px 0 0!important}
 .mz-blick{border-top:1px solid rgba(8,45,37,.18)!important;border-bottom:0!important}
 body.life .mz-blick{border-top-color:rgba(42,40,38,.18)!important}
 body.dark .mz-blick{border-top-color:rgba(245,243,237,.18)!important}
+
+/* Fuß und Menü-Rechtliches in der Hausschrift: Newsreader kursiv, klein, leicht gesperrt (4. November 2026) */
+.foot nav a,.foot nav a:not(.crew),.foot nav .crew,.menu .legal a{font-family:var(--serif)!important;font-style:italic!important;font-weight:300!important;font-size:14px!important;letter-spacing:.06em!important;text-transform:none!important}
+.foot nav span,.foot nav .crew + span,.menu .legal span{font-family:var(--serif)!important;font-size:14px!important}
+@media (max-width:859px){.foot nav a,.foot nav a:not(.crew),.foot nav .crew,.foot nav span{font-size:13px!important;letter-spacing:.03em!important}}
+
+/* Rubrikseiten wachsen mit: Aufmacher, Strecke, Register (4. November 2026)
+   Stories/Places: 1–3 groß, ab 4 Register. People: 1–4 Porträts, ab 5 Register. */
+.list.gallery.spreads > .g-piece:nth-child(n+4),
+.list.gallery.portraits > .g-piece:nth-child(n+5){display:grid!important;grid-template-columns:72px 1fr auto;grid-template-rows:auto auto;column-gap:18px;align-items:center;aspect-ratio:auto!important;margin:0!important;padding:14px 0!important;background:none!important;box-shadow:none!important;border-top:1px solid rgba(8,45,37,.14);transform:none!important}
+.list.gallery.spreads > .g-piece:nth-child(n+4)::after,.list.gallery.portraits > .g-piece:nth-child(n+5)::after{content:"→";position:static;width:auto;background:none;grid-column:3;grid-row:1/3;font-size:18px;color:var(--green)}
+.list.gallery.spreads > .g-piece:nth-child(n+4) .g-img,.list.gallery.portraits > .g-piece:nth-child(n+5) .g-img{grid-column:1;grid-row:1/3;width:72px!important;height:90px!important;aspect-ratio:auto!important;margin:0!important;border:0!important;box-shadow:none!important}
+.list.gallery.spreads > .g-piece:nth-child(n+4) .g-line,.list.gallery.portraits > .g-piece:nth-child(n+5) .g-line{grid-column:2;grid-row:1;margin:0!important;padding:0!important;text-align:left!important;text-indent:0!important;font-size:19px!important;line-height:1.25;max-width:none}
+.list.gallery.spreads > .g-piece:nth-child(n+4) .g-sig,.list.gallery.portraits > .g-piece:nth-child(n+5) .g-sig{grid-column:2;grid-row:2;margin:4px 0 0!important;padding:0!important;text-align:left!important}
+.list.gallery.spreads > .g-piece:nth-child(n+4) .g-auf,.list.gallery.spreads > .g-piece:nth-child(n+4) .g-kick,.list.gallery.portraits > .g-piece:nth-child(n+5) .g-kick{display:none!important}
+.list.gallery.spreads > .g-piece:nth-child(4),.list.gallery.portraits > .g-piece:nth-child(5){margin-top:40px!important}
+.list.gallery.spreads > .g-piece:nth-child(n+4) a.g-img::before,.list.gallery.portraits > .g-piece:nth-child(n+5) a.g-img::before{content:"";position:absolute;inset:0;z-index:2}
+.list.gallery.spreads > .g-piece:nth-child(n+4),.list.gallery.portraits > .g-piece:nth-child(n+5){position:relative}
+@media (min-width:860px){
+  .list.gallery.spreads > .g-piece:nth-child(n+4),.list.gallery.portraits > .g-piece:nth-child(n+5){grid-column:1/-1;max-width:760px;width:100%;margin-left:auto!important;margin-right:auto!important;grid-template-columns:96px 1fr auto}
+  .list.gallery.spreads > .g-piece:nth-child(n+4) .g-img,.list.gallery.portraits > .g-piece:nth-child(n+5) .g-img{width:96px!important;height:120px!important}
+  .list.gallery.spreads > .g-piece:nth-child(n+4) .g-line,.list.gallery.portraits > .g-piece:nth-child(n+5) .g-line{font-size:22px!important}
+}
+/* Kapitelliste unten auf Rubrikseiten entfällt */
+main + .toc{display:none}
+.list.gallery.portraits,.list.gallery.spreads{row-gap:0!important}
+.aufmacher > .g-piece:nth-child(n+4) .g-line,.aufmacher > .g-piece:nth-child(n+4) .g-sig{display:block!important}
+@media (max-width:859px){.list.gallery.spreads > .g-piece:nth-child(n+4) .g-sig,.list.gallery.portraits > .g-piece:nth-child(n+5) .g-sig{font-size:12px!important;letter-spacing:.1em!important}.list.gallery.spreads > .g-piece:nth-child(n+4) .g-line,.list.gallery.portraits > .g-piece:nth-child(n+5) .g-line{font-size:17px!important}}
