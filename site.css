@@ -637,3 +637,91 @@ body.objects .g-piece:last-child{margin-bottom:160px}
 }
 @media (min-width:860px){.mz-cnt{display:none}}
 .sub-mast .sm-line + .sm-kick{margin-top:30px}
+
+/* ===== Magazin-Charakter (Skill, 4. November 2026) ===== */
+/* Tabu: keine gesperrten Versalien als Dachzeile. Rubriken kursiv in Grün */
+.lab,.sub-mast .sm-kick,.fp-kick,.g-sig,.lg-collective dt,.cover .lines small{text-transform:none;letter-spacing:0;margin-right:0;padding-left:0;font-style:italic;font-weight:400}
+.lab,.sub-mast .sm-kick,.g-sig,.lg-collective dt{color:var(--green);font-size:15px}
+.cover .lines small{font-size:14px;opacity:.9}
+body.dark .lab,body.dark .sub-mast .sm-kick,body.dark .g-sig,.fp-kick{color:rgba(245,243,237,.72);font-size:15px}
+.st-quote cite,.voice2 cite{text-transform:none;letter-spacing:0;font-size:14px;color:#6f6b64}
+.story-page .door .name span,.door.crew .name span{text-transform:none!important;letter-spacing:0!important;font-style:italic;font-size:17px!important}
+.menu li .t{text-transform:none;letter-spacing:0;font-style:italic;font-size:22px}
+.toc a{text-transform:none;letter-spacing:0;padding-left:0;font-style:italic;font-size:17px}
+.obj-name{text-transform:none;letter-spacing:0;margin-right:0;font-style:italic;font-size:17px;color:rgba(245,243,237,.7)}
+.obj-collab{text-transform:none;letter-spacing:0;padding-left:0;font-style:italic;font-size:13px}
+.lg-collective h2{text-transform:none;letter-spacing:0;margin-right:0;font-style:italic;font-size:clamp(20px,5.4vw,24px)}
+/* Tabu: kein Logo-Siegel als Vignette. Oben steht immer die schlichte Wortmarke */
+.bar.clean{background:rgba(245,243,237,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.bar.clean .center,.bar.clean .side.l{opacity:1;pointer-events:auto}
+body.dark .bar.clean{background:rgba(10,10,10,.9)}
+.sub-mast:not(.mz-kopf){padding-top:calc(108px + env(safe-area-inset-top,0px))}
+.sub-mast .sm-line{margin-top:0}
+/* Story-Kopf: Titelbild höchstens 60 %, Titel und Vorspann im ersten Screen */
+.st-hero.mz-hero{height:58svh;min-height:340px}
+.mz-hero + .sub-mast.mz-kopf{text-align:left;padding:26px var(--gr) 0 var(--gl)}
+.mz-kopf .sm-kick{margin:0 0 10px}
+.mz-kopf h1{margin:0;max-width:none;font-weight:300;font-size:clamp(34px,9.4vw,64px);line-height:1.02;letter-spacing:-.015em}
+.mz-kopf .sm-sub{margin:12px 0 0;max-width:none;font-style:italic;font-weight:400;color:var(--soft);font-size:clamp(18px,4.8vw,21px)}
+.mz-kopf + .wrap .st-body{padding-top:22px}
+.mz-vor{border-top:1px solid rgba(8,45,37,.22);padding-top:20px}
+.mz-by{border-bottom:0;margin-bottom:40px!important}
+@media (min-width:860px){.st-hero.mz-hero{height:min(62vh,52vw)}.mz-hero + .sub-mast.mz-kopf{max-width:760px;margin:0 auto;padding:44px 0 0}.mz-kopf + .wrap .st-body{padding-top:30px}}
+/* Lesetext: Ulis Wunsch 20 px bleibt (Skill nennt 17 bis 19 px) */
+/* Schlusszeichen: kleines Quadrat in der Akzentfarbe */
+.mz-end{display:inline-block;width:.42em;height:.42em;margin-left:.4em;background:var(--green);vertical-align:.08em}
+/* Auf einen Blick */
+.mz-blick{margin:48px 0 0;padding:16px 0 4px;border-top:1px solid var(--ink);border-bottom:1px solid rgba(8,45,37,.18);display:grid;grid-template-columns:1fr 1fr;column-gap:24px;max-width:none!important}
+.mz-blick dt.h{grid-column:1/-1;font-style:italic;color:var(--green);font-size:16px;margin-bottom:12px}
+.mz-blick div{padding:0 0 14px}
+.mz-blick div dt{font-size:12.5px;color:#6f6b64;margin-bottom:2px}
+.mz-blick dd{margin:0;font-size:18px;font-weight:400;line-height:1.3}
+/* Nächste Story: Schwarzweiß auf dunklem Grund */
+.mz-next .img img{filter:grayscale(1) contrast(1.05)}
+.mz-next{margin-top:80px}
+.story-page:has(.mz-next) ~ .foot{margin-top:0}
+/* Wischreihe nach Skill: 4:5, 86 %, Zähler, Striche, Tiefe, am Desktop Pfeile */
+.mz-track{align-items:stretch}
+.mz-track figure,.mz-track figure.hoch,.mz-track figure.quer{flex:0 0 86%;width:auto;max-width:520px;transform-origin:left center;transition:none}
+.mz-track .f{aspect-ratio:4/5!important;height:auto}
+.mz-track figcaption{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mz-cnt b{font-style:normal;font-weight:400;font-size:14px;color:var(--paper)}
+.mz-cnt{font-size:14px;font-style:normal;color:rgba(245,243,237,.55)}
+.mz-sf{display:flex!important;justify-content:space-between;align-items:center;margin-top:20px}
+.mz-dots{display:flex!important}
+.mz-arr{display:none;gap:10px}
+.mz-arr button{width:40px;height:40px;border-radius:50%;border:1px solid rgba(245,243,237,.3);background:none;color:var(--paper);font:inherit;font-size:16px;cursor:pointer}
+@media (min-width:860px){
+  .mz-cnt{display:inline!important}
+  .mz-track{display:flex!important;overflow-x:auto;justify-content:flex-start;padding:26px 0 0;max-width:1240px;margin:0 auto}
+  .mz-track figure,.mz-track figure.hoch,.mz-track figure.quer{flex:0 0 400px;width:auto}
+  .mz-sf{max-width:1240px;margin:20px auto 0}
+  .mz-arr{display:flex}
+}
+/* Bewegung: alles leise, bei reduzierter Bewegung aus */
+@media (prefers-reduced-motion:no-preference){
+ ::view-transition-old(root){animation:vt-raus .5s cubic-bezier(.32,.72,0,1) both}
+ ::view-transition-new(root){animation:vt-rein .5s cubic-bezier(.32,.72,0,1) both;box-shadow:-12px 0 32px rgba(10,10,10,.18)}
+ html:active-view-transition-type(zurueck)::view-transition-old(root){animation:vt-raus-z .5s cubic-bezier(.32,.72,0,1) both;z-index:2}
+ html:active-view-transition-type(zurueck)::view-transition-new(root){animation:vt-rein-z .5s cubic-bezier(.32,.72,0,1) both}
+ .bar{transition:transform .45s cubic-bezier(.32,.72,0,1),background .4s,color .4s}
+ .bar.weg{transform:translateY(-100%)}
+ .leise{opacity:0;transform:translateY(18px);transition:opacity 1s cubic-bezier(.2,.6,.2,1),transform 1s cubic-bezier(.2,.6,.2,1)}
+ .leise.da{opacity:1;transform:none}
+ .leise img{transform:scale(1.07);transition:transform 1.6s cubic-bezier(.2,.6,.2,1)}
+ .leise.da img{transform:scale(1)}
+ .leise-t{opacity:0;transform:translateY(14px);transition:opacity .9s cubic-bezier(.2,.6,.2,1),transform .9s cubic-bezier(.2,.6,.2,1)}
+ .leise-t.da{opacity:1;transform:none}
+ .druck{transition:transform .25s cubic-bezier(.32,.72,0,1)}
+ .druck:active{transform:scale(.97)}
+}
+@keyframes vt-raus{to{transform:translateX(-30%);filter:brightness(.82)}}
+@keyframes vt-rein{from{transform:translateX(100%)}}
+@keyframes vt-raus-z{to{transform:translateX(100%)}}
+@keyframes vt-rein-z{from{transform:translateX(-30%);filter:brightness(.82)}}
+.sub-mast:has(h1.thought) .sm-kick{letter-spacing:0;font-size:16px;color:var(--green);margin:0 0 14px}
+body.dark .sub-mast:has(h1.thought) .sm-kick{color:rgba(245,243,237,.72)}
+@media (min-width:860px){.st-hero.mz-hero img{object-position:55% 18%}}
+.bar.over,.bar.over.clean{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+.bar.over.clean .center,.bar.over.clean .side.l{opacity:0;pointer-events:none}
+@media (min-width:860px){.st-hero.mz-hero img{object-position:55% 8%}}
