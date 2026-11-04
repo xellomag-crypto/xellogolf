@@ -861,3 +861,18 @@ body.life .ph{background:#E6DCCD}
   .st-hero.mz-hero.hoch{height:min(82vh,900px);background:transparent;display:flex;justify-content:center;padding-top:72px;box-sizing:border-box}
   .st-hero.mz-hero.hoch img{width:auto;height:100%;max-width:none;object-fit:contain;box-shadow:0 18px 40px -18px rgba(5,5,5,.45)}
 }
+
+/* Beitrag ruhiger: eine Schrift, wenige Größen, keine Trennstriche (4. November 2026) */
+.mz-vor{font-weight:300;font-size:clamp(20px,5.4vw,23px);line-height:1.5;border-top:0;padding-top:0;margin:0 0 18px!important;color:var(--ink)}
+.mz-vor em{font-style:normal;color:inherit}
+.mz-by{display:block;border:0;padding:0;margin:0 0 48px!important;font-size:14px;font-style:italic;color:var(--soft);letter-spacing:0}
+.mz-by span,.mz-by span:first-child,.mz-by span:last-child{font-weight:300;font-style:italic;color:var(--soft)}
+.mz-by span + span::before{content:"·";margin:0 .55em}
+.mz .st-big{font-style:normal;font-size:inherit;line-height:inherit;margin:0 0 26px!important}
+.mz-zahl{border:0;padding:0;margin:48px 0!important;gap:26px}
+.mz-zahl .n{font-size:clamp(72px,20vw,104px)}
+.mz-zahl .t{font-size:17px}
+.mz .st-quote{border:0;padding:0;margin:56px 0}
+.mz .st-quote q{font-size:clamp(24px,6.4vw,30px);line-height:1.35}
+.mz .st-end{font-style:normal;font-size:inherit;line-height:inherit;margin-top:0!important}
+@media (min-width:860px){.mz-vor{font-size:23px}.mz .st-quote{margin:64px 0;padding:0}}
