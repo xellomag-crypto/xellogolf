@@ -1375,3 +1375,19 @@ body.dark .bar:not(.over):not(.clean){background:rgba(8,8,8,.94);box-shadow:0 1p
 }
 @media (max-width:859px){.story-page:has(.voice2) .mz-blick{grid-template-columns:1fr;row-gap:2px}.story-page:has(.voice2) .mz-blick > div{margin-bottom:12px}}
 .foot .x,.foot a.mark.x{width:36px}
+
+/* Stories-Übersicht ohne Kopf: Bild oben, „Stories“ darunter (4. November 2026) */
+.vh-head{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.vh-head + main .list{padding-top:calc(76px + env(safe-area-inset-top,0px))}
+.g-kick{margin:22px 0 0;text-align:center;font-style:italic;font-size:15px;color:var(--green)}
+.g-kick + .g-auf + .g-line{margin-top:10px}
+@media (min-width:860px){.g-kick{display:none}.vh-head + main .list{padding-top:110px}}
+
+/* Galerie-Zeilen überall zart (auch Doppelseiten am Handy) */
+.list.gallery .g-line{font-weight:300}
+@media (max-width:859px){.list.gallery .g-line{font-size:clamp(23px,6.2vw,30px);line-height:1.25}}
+
+/* Karten: Text und Zitat kleiner */
+.k-txt{font-size:16px;line-height:1.55}
+.k-zit{font-size:18px;line-height:1.4}
+@media (min-width:860px){body.golf-home .karte:not(.dunkel):first-child .k-txt,body.life .karte:not(.dunkel):first-child .k-txt{font-size:17px}}
