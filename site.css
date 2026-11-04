@@ -1079,3 +1079,12 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .sp-nach{margin:0 0 6px!important;font-style:italic;font-size:17px;color:var(--soft)}
   .sp-text:has(.sp-stimme) .sp-sign{margin-top:8px!important}
 }
+
+/* Places-Doppelseite: Zitat groß über die Seite, Porträt rechts darunter (4. November 2026) */
+@media (min-width:860px){
+  .sp-stimme{grid-template-columns:1fr auto;grid-template-rows:auto auto;column-gap:22px;row-gap:26px;margin:36px 0 30px}
+  .sp-stimme blockquote{display:contents}
+  .sp-stimme q{grid-column:1/-1;grid-row:1;font-size:clamp(30px,2.9vw,42px);line-height:1.18;text-indent:-.42em;padding-left:.42em}
+  .sp-stimme img{grid-column:2;grid-row:2;width:clamp(150px,13vw,190px)}
+  .sp-stimme cite{grid-column:1;grid-row:2;justify-self:end;align-self:center;text-align:right;margin:0;font-size:16px}
+}
