@@ -1711,3 +1711,8 @@ main + .toc{display:none}
   .portraits .g-piece:nth-child(-n+4){margin-bottom:90px}
 }
 @media (min-width:860px){.portraits .g-kick.k1{display:none!important}}
+/* Instagram im Fuß */
+.foot .ig{display:block;width:20px;height:20px;margin:22px auto 0;color:rgba(245,243,237,.88);transition:color .3s}
+.foot .ig:hover{color:#fff}
+.foot .ig svg{width:100%;height:100%;display:block}
+.foot .ig + nav{margin-top:20px}
