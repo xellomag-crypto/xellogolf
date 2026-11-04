@@ -1701,3 +1701,4 @@ main + .toc{display:none}
   body:not(.life) .has-spread > .mz-kopf + .wrap .st-body{padding-top:36px}
 }
 @media (max-width:859px){.foot .x,.foot a.mark.x{width:26px}}
+@media (max-width:859px){.foot .x,.foot a.mark.x{width:22px}}
