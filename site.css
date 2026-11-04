@@ -1429,3 +1429,16 @@ a:hover .play,button:hover .play,.vplay:hover .play{transform:scale(1.06);backgr
 .menu .other .name .room{display:block;margin-top:4px;font-size:8.5px;letter-spacing:.5em;margin-right:-.5em;text-transform:uppercase;font-weight:400}
 .menu .legal{justify-content:center}
 .menu .other .name .room{font-size:8.5px!important;letter-spacing:.5em!important;line-height:1!important}.menu .other{margin-bottom:24px}
+
+/* Rubrikseiten ohne Kopf: Rubrik klein unter dem ersten Bild (4. November 2026) */
+.g-kick.k1{display:block!important}
+body.dark .g-kick,body.objects .g-kick{color:rgba(245,243,237,.6)}
+.portraits .g-kick.k1{text-align:left}
+@media (min-width:860px){.spreads .g-kick.k1{display:none!important}}
+.list.gallery:not(.spreads):not(.portraits) .g-kick.k1{margin-top:20px}
+
+/* Originals-Übersicht: kein Play-Knopf, sondern „Zum Film →“ */
+.zum-film{position:absolute;left:50%;top:50%;z-index:2;transform:translate(-50%,-50%);padding:13px 26px;border:1px solid rgba(255,255,255,.8);border-radius:40px;background:rgba(10,10,10,.3);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;font-family:var(--narrow);font-weight:300;font-size:14px;letter-spacing:.24em;text-transform:lowercase;white-space:nowrap;transition:background .3s}
+.zum-film i{font-style:normal;font-family:var(--serif);letter-spacing:0;margin-left:.5em}
+.bill-media:hover .zum-film{background:rgba(10,10,10,.5)}
+.bill .g-kick.k1{text-align:left;margin:18px 0 0}
