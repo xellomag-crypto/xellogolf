@@ -979,3 +979,31 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   body.golf-home .karte:not(.dunkel):first-child .k-zit{grid-row:6}
   body.golf-home .karte:not(.dunkel):first-child .k-fuss{grid-row:8}
 }
+
+/* Life-Startseite: Karten als Magazinseiten wie Golf (4. November 2026) */
+@media (min-width:860px){
+  body.life .karten .col{column-gap:40px}
+  body.life .karte:not(.dunkel){background:#FCFBF7;padding:30px 30px 24px;margin-bottom:72px;box-shadow:0 1px 2px rgba(5,5,5,.06),0 18px 36px -22px rgba(5,5,5,.32)}
+  body.life .karte:not(.dunkel) .k-kopf{border-top:0;padding-top:0}
+  body.life .karte:not(.dunkel) .k-bild{margin:16px 0 20px}
+  /* Aufmacher als Doppelseite: links Bildseite randabfallend, rechts Textseite, Falz in der Mitte */
+  body.life .karte:not(.dunkel):first-child{position:relative;padding:0;grid-template-columns:1fr 1fr;grid-template-rows:auto auto auto auto auto 1fr auto;column-gap:0;aspect-ratio:8/5}
+  body.life .karte:not(.dunkel):first-child .k-kopf{grid-column:2;grid-row:1;padding:44px 56px 0}
+  body.life .karte:not(.dunkel):first-child .k-bild{grid-column:1;grid-row:1/-1;margin:0;aspect-ratio:auto;height:100%}
+  body.life .karte:not(.dunkel):first-child .k-t,body.life .karte:not(.dunkel):first-child .k-sub,body.life .karte:not(.dunkel):first-child .k-txt,body.life .karte:not(.dunkel):first-child .k-zit,body.life .karte:not(.dunkel):first-child .k-fuss{grid-column:2;padding:0 56px}
+  body.life .karte:not(.dunkel):first-child .k-t{margin-top:34px}
+  body.life .karte:not(.dunkel):first-child .k-fuss{padding-bottom:40px}
+  body.life .karte:not(.dunkel):first-child::after{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 40px);width:80px;pointer-events:none;background:linear-gradient(90deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.07) 46%,rgba(5,5,5,.16) 50%,rgba(255,255,255,.18) 51%,rgba(5,5,5,.05) 56%,rgba(5,5,5,0) 100%)}
+}
+@media (min-width:860px){
+  body.life .karte:not(.dunkel):not(:first-child){display:flex;flex-direction:column}
+  body.life .karte:not(.dunkel):not(:first-child) .k-bild{flex-shrink:0}
+  body.life .karte:not(.dunkel):not(:first-child) .k-fuss{margin-top:auto;padding-top:22px}
+  body.life .karte:not(.dunkel):first-child{grid-template-rows:auto 1fr auto auto auto auto 1.3fr auto}
+  body.life .karte:not(.dunkel):first-child .k-t{grid-row:3;margin-top:0;font-size:clamp(42px,4vw,62px);line-height:1.04}
+  body.life .karte:not(.dunkel):first-child .k-sub{grid-row:4;margin-top:14px}
+  body.life .karte:not(.dunkel):first-child .k-txt{grid-row:5;margin-top:22px}
+  body.life .karte:not(.dunkel):first-child .k-zit{grid-row:6}
+  body.life .karte:not(.dunkel):first-child .k-fuss{grid-row:8}
+}
+@media (min-width:860px){body.life .karte:not(.dunkel){background:#FBF8F2}}
