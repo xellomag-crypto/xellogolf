@@ -1310,3 +1310,18 @@ body.dark .g-sig,body.dark .obj-info,body.objects .obj-info{color:rgba(245,243,2
 .menu .legal a{font-family:var(--narrow);font-weight:300;font-size:13px;letter-spacing:.24em;text-transform:lowercase;color:rgba(245,243,237,.72);text-decoration:none}
 .menu .legal a:hover{color:var(--paper)}
 .menu .legal span{font-family:var(--narrow);font-size:13px;margin:0 .9em;color:rgba(245,243,237,.35)}
+
+/* Burger breiter, Striche kräftiger; Menü schließen als X (4. November 2026) */
+.burger{width:34px;height:30px;gap:8px}
+.burger i,.bar.over .burger i,.bar.clean .burger i{height:2px;border-radius:1px}
+.menu .close{position:relative;width:34px;height:30px;padding:0;background:none;border:0;color:inherit;opacity:.9;cursor:pointer}
+.menu .close i{position:absolute;left:2px;right:2px;top:50%;height:2px;margin-top:-1px;border-radius:1px;background:currentColor}
+.menu .close i:first-child{transform:rotate(45deg)}
+.menu .close i:last-child{transform:rotate(-45deg)}
+.menu .close:hover{opacity:1}
+
+/* Nächste Story: Rubrikzeile schmal wie der Fuß, mehr Luft vor dem Fuß, kein Schatten */
+.mz-nt .k,.story-page .mz-nt .k{font-family:var(--narrow)!important;font-style:normal;font-weight:300;font-size:13px;letter-spacing:.24em;text-transform:lowercase;color:rgba(245,243,237,.6)}
+.story-page .mz-next{box-shadow:none!important;transform:none!important}
+@media (min-width:860px){.story-page .mz-nt{padding-bottom:88px}.story-page:has(.mz-next) ~ .foot{padding-top:80px}}
+@media (max-width:859px){.mz-nt{padding-bottom:64px}.story-page:has(.mz-next) ~ .foot{padding-top:64px}}

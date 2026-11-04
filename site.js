@@ -2,7 +2,7 @@
 (function(){
   var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
   var bar=document.getElementById("bar"),menu=document.getElementById("menu");
-  if(bar&&!rm){var last=scrollY;addEventListener("scroll",function(){var y=scrollY;if(menu&&menu.classList.contains("open"))return;if(y>last+6&&y>140)bar.classList.add("weg");else if(y<last-6||y<140)bar.classList.remove("weg");last=y},{passive:true})}
+  if(bar&&!rm){var last=scrollY;addEventListener("scroll",function(){var y=scrollY;if(menu&&menu.classList.contains("open"))return;var unten=innerHeight+y>document.documentElement.scrollHeight-260;if(y>last+6&&y>140&&!unten)bar.classList.add("weg");else if(y<last-6||y<140||unten)bar.classList.remove("weg");last=y},{passive:true})}
   document.querySelectorAll(".karte,.g-img,.full,.door,.mz-next .img,.mz-track .f,.fp-btn,.world,.item,.more,.go").forEach(function(e){e.classList.add("druck")});
   if(rm||!("IntersectionObserver" in window))return;
   var bilder=".karte,.g-piece,.piece,.st-inline,.vfilm,.mz-next .img,.voice2 .round,.item",texte=".st-quote,.mz-zahl,.st-big,.voice2 blockquote,.mz-blick,.where";
