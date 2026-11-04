@@ -876,3 +876,19 @@ body.life .ph{background:#E6DCCD}
 .mz .st-quote q{font-size:clamp(24px,6.4vw,30px);line-height:1.35}
 .mz .st-end{font-style:normal;font-size:inherit;line-height:inherit;margin-top:0!important}
 @media (min-width:860px){.mz-vor{font-size:23px}.mz .st-quote{margin:64px 0;padding:0}}
+
+/* Golf am Desktop: Cover als Titelseite im Hochformat wie Life (4. November 2026) */
+@media (min-width:860px){
+  .cover.titel{height:calc(100svh - 150px);min-height:560px;max-height:1000px;aspect-ratio:4/5;width:auto;margin:92px auto 0;container-type:size;box-shadow:0 1px 2px rgba(5,5,5,.08),0 18px 40px -18px rgba(5,5,5,.45)}
+  .cover.titel .mast{top:5cqh}
+  .cover.titel .mast .w{width:78cqw;max-width:none}
+  .cover.titel .mast .room{font-size:max(12px,2.6cqw)}
+  .cover.titel .mast .tag{font-size:max(18px,4.4cqw);margin-top:1.6cqh}
+  .cover.titel .lines{left:6cqw;right:6cqw;bottom:5cqh;grid-template-columns:1fr;gap:2.4cqh}
+  .cover.titel .lines .l2{text-align:left}
+  .cover.titel .lines small{font-size:max(13px,2.8cqw)}
+  .cover.titel .lines b{font-size:max(22px,5.8cqw)}
+  .cover.titel .lines .l2 b{font-size:max(17px,4cqw)}
+  body:has(.cover.titel) .bar.over{color:var(--green)}
+  body:has(.cover.titel) .bar.over .burger{color:var(--green);filter:none}
+  .cover.titel + main{margin-top:40px}
