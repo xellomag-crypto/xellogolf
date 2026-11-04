@@ -1053,3 +1053,16 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .has-spread .mz-strecke .mz-track figcaption{-webkit-line-clamp:unset;display:block;margin-top:12px;font-size:14px;color:var(--soft)}
   .has-spread .mz-strecke .mz-track .f img{transform:none!important}
 }
+
+/* Doppelseite: Ergänzungen für Film, Stimme mit Rundbild, Signatur (4. November 2026) */
+@media (min-width:860px){
+  .has-spread > .wrap .st-body > .vfilm{display:block}
+  .has-spread > .wrap:has(.vfilm) .st-body{max-width:1200px}
+  .sp-voice{display:grid;grid-template-columns:64px 1fr;gap:18px;align-items:center;margin:22px 0}
+  .sp-voice img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+  .sp-voice .sp-quote{margin:0}
+  .sp-sign{margin-top:22px!important;font-style:italic;font-size:15px;color:var(--soft)}
+  .sp-sign .sep{margin:0 .5em}
+  .sp-sign a{color:inherit;text-decoration:none}.sp-sign a:hover{color:var(--green)}
+  .sp-hint{font-style:italic;color:var(--soft)}
+}
