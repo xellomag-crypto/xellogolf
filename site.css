@@ -1088,3 +1088,4 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .sp-stimme img{grid-column:2;grid-row:2;width:clamp(150px,13vw,190px)}
   .sp-stimme cite{grid-column:1;grid-row:2;justify-self:end;align-self:center;text-align:right;margin:0;font-size:16px}
 }
+.mz-blick dd a.place-link{color:inherit;text-decoration:none}.mz-blick dd a.place-link:hover{color:var(--green)}
