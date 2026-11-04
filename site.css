@@ -1182,3 +1182,4 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .spreads .g-piece:has(a.g-img){cursor:pointer;transition:transform .5s cubic-bezier(.32,.72,0,1),box-shadow .5s}
   .spreads .g-piece:has(a.g-img):hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(5,5,5,.06),0 30px 56px -26px rgba(5,5,5,.42)}
 }
+@media (min-width:860px){.spreads a.g-img.druck:active,.spreads a.g-img:active{transform:none!important}}
