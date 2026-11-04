@@ -1290,3 +1290,12 @@ body.dark .g-sig,body.dark .obj-info,body.objects .obj-info{color:rgba(245,243,2
 .foot nav a,.foot nav a:not(.crew),.foot nav .crew{font-family:var(--narrow)!important;font-weight:300;font-size:13px;letter-spacing:.24em;text-transform:lowercase}
 .foot nav span,.foot nav .crew + span{font-family:var(--narrow);font-size:13px}
 @media (max-width:859px){.foot nav a,.foot nav a:not(.crew),.foot nav .crew,.foot nav span{font-size:12px;letter-spacing:.16em}.foot nav span,.foot nav .crew + span{margin:0 .55em}}
+
+/* Weltwechsel (Regal, Golf, Life): ruhiges Überblenden statt Schieben (4. November 2026) */
+.cover,.heft{background:var(--paper)}
+@media (prefers-reduced-motion:no-preference){
+  html:active-view-transition-type(welt)::view-transition-old(root){animation:welt-raus .38s cubic-bezier(.4,0,.2,1) both;box-shadow:none;z-index:1}
+  html:active-view-transition-type(welt)::view-transition-new(root){animation:welt-rein .75s cubic-bezier(.2,.6,.2,1) .12s both;box-shadow:none;z-index:2}
+}
+@keyframes welt-raus{to{opacity:0;transform:scale(.985)}}
+@keyframes welt-rein{from{opacity:0;transform:scale(1.015)}}
