@@ -1034,3 +1034,22 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .mz-spread .mz-end{display:inline-block;width:.42em;height:.42em;margin-left:.45em;background:var(--green);vertical-align:.08em}
 }
 @media (min-width:860px){.sp-quote q{hyphens:manual;-webkit-hyphens:manual}}
+
+/* Bildstrecke am Desktop als zweite Doppelseite (4. November 2026) */
+@media (min-width:860px){
+  .has-spread .mz-strecke{background:transparent;color:var(--ink);padding:0;margin:0 auto 24px;max-width:1200px}
+  .has-spread .mz-strecke > .wrap{display:none}
+  .has-spread .mz-strecke .mz-track{position:relative;display:grid!important;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:0;overflow:visible;max-width:1200px;margin:0 auto;padding:0!important;min-height:min(calc(100vh - 150px),760px);background:#FCFBF7;box-shadow:0 1px 2px rgba(5,5,5,.06),0 24px 48px -26px rgba(5,5,5,.36);scroll-snap-type:none}
+  body.life.has-spread .mz-strecke .mz-track,body.life .has-spread .mz-strecke .mz-track{background:#FBF8F2}
+  .has-spread .mz-strecke .mz-track::after{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 40px);width:80px;pointer-events:none;z-index:2;background:linear-gradient(90deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.07) 46%,rgba(5,5,5,.16) 50%,rgba(255,255,255,.18) 51%,rgba(5,5,5,.05) 56%,rgba(5,5,5,0) 100%)}
+  .has-spread .mz-strecke .mz-track figure{flex:none!important;width:auto!important;max-width:none!important;margin:0;transform:none!important;opacity:1!important;display:flex;flex-direction:column}
+  .has-spread .mz-strecke .mz-track figure:first-child{grid-column:1;grid-row:1/3;position:relative}
+  .has-spread .mz-strecke .mz-track figure:first-child .f{position:absolute;inset:0;aspect-ratio:auto!important;height:100%}
+  .has-spread .mz-strecke .mz-track figure:first-child figcaption{position:absolute;left:28px;bottom:22px;right:28px;z-index:1;color:rgba(245,243,237,.92);text-shadow:0 1px 8px rgba(5,5,5,.5)}
+  .has-spread .mz-strecke .mz-track figure:nth-child(2){grid-column:2;grid-row:1;padding:56px 56px 0 64px}
+  .has-spread .mz-strecke .mz-track figure:nth-child(3){grid-column:2;grid-row:2;padding:36px 56px 48px 64px}
+  .has-spread .mz-strecke .mz-track figure:nth-child(n+2) .f{aspect-ratio:3/2!important;height:auto}
+  .has-spread .mz-strecke .mz-track figure:nth-child(n+4){display:none}
+  .has-spread .mz-strecke .mz-track figcaption{-webkit-line-clamp:unset;display:block;margin-top:12px;font-size:14px;color:var(--soft)}
+  .has-spread .mz-strecke .mz-track .f img{transform:none!important}
+}
