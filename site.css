@@ -1176,3 +1176,9 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .has-spread .mz-strecke .mz-cnt{color:var(--soft)!important;font-family:var(--sans);font-size:11.5px;letter-spacing:.08em}
   .has-spread .mz-strecke .mz-cnt b{color:var(--ink)!important}
 }
+@media (min-width:860px){
+  .spreads a.g-img{position:static}
+  .spreads a.g-img::before{content:"";position:absolute;inset:0;z-index:2}
+  .spreads .g-piece:has(a.g-img){cursor:pointer;transition:transform .5s cubic-bezier(.32,.72,0,1),box-shadow .5s}
+  .spreads .g-piece:has(a.g-img):hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(5,5,5,.06),0 30px 56px -26px rgba(5,5,5,.42)}
+}
