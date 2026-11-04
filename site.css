@@ -1066,3 +1066,4 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .sp-sign a{color:inherit;text-decoration:none}.sp-sign a:hover{color:var(--green)}
   .sp-hint{font-style:italic;color:var(--soft)}
 }
+@media (min-width:860px){.sp-info{margin-top:18px!important;font-family:var(--sans);font-size:11.5px;letter-spacing:.08em;color:var(--soft)}.sp-info + .sp-sign{margin-top:6px!important}}
