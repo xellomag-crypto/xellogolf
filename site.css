@@ -1494,3 +1494,90 @@ body.dark .g-sig,body.objects .obj-info,body.dark .obj-info{color:rgba(245,243,2
 /* Objects: jedes Objekt als eigene Seite mit feinem Rahmen */
 body.objects .g-piece.obj .g-img{box-sizing:border-box;border:10px solid #151515;box-shadow:0 0 0 1px rgba(245,243,237,.08),0 30px 60px -30px rgba(0,0,0,.8)}
 .o-media{position:relative}
+
+/* ===== Life am Desktop: lebendiges Magazin nach Nordheide-Muster (4. November 2026) ===== */
+.mz-kopf .mz-vor{margin-top:22px!important}
+.mz-kopf .mz-by{margin:14px 0 0!important}
+@media (min-width:1024px){
+  /* Beitrag: Eröffnung als Doppelseite, Bild links bis zum Rand, Kopf rechts */
+  body.life .story-page.has-spread{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+  body.life .story-page.has-spread > *{grid-column:1/-1}
+  body.life .has-spread > .mz-spread{display:none!important}
+  body.life .has-spread > .mz-hero{display:block!important;grid-column:1;grid-row:1;height:100svh!important;max-height:none;margin:0;aspect-ratio:auto}
+  body.life .has-spread > .mz-hero.hoch{padding:0;background:transparent}
+  body.life .has-spread > .mz-hero img,body.life .has-spread > .mz-hero.hoch img{width:100%;height:100%;object-fit:cover;box-shadow:none;object-position:var(--dpos,50% 30%)}
+  body.life .has-spread > .mz-kopf{display:block!important;grid-column:2;grid-row:1;align-self:center;max-width:none!important;margin:0!important;padding:120px 56px 80px!important;text-align:left}
+  body.life .has-spread > .mz-kopf h1{font-size:clamp(46px,4.4vw,78px);line-height:1.02;letter-spacing:-.015em}
+  body.life .has-spread > .mz-kopf .sm-sub{font-size:18px}
+  body.life .has-spread > .mz-kopf .mz-vor{font-size:24px;line-height:1.42}
+  /* Text vollständig darunter, eine Spalte */
+  body.life .has-spread > .wrap .st-body > *{display:revert}
+  body.life .has-spread > .wrap .st-body{max-width:680px;padding-top:72px}
+  body.life .has-spread > .wrap .st-body p{font-size:19px;line-height:1.62}
+  body.life .has-spread .st-quote{margin:64px -140px!important;text-align:center}
+  body.life .has-spread .st-quote q{font-size:46px;line-height:1.1}
+  body.life .has-spread .mz-zahl{margin-left:-140px!important;margin-right:-140px!important;column-gap:40px}
+  body.life .has-spread .mz-zahl .n{font-size:140px}
+  body.life .has-spread .mz-zahl .t{font-size:22px}
+  body.life .has-spread .mz-blick{display:grid!important}
+  /* Nächste Story: Bild und Titel nebeneinander */
+  body.life .story-page .mz-next{display:grid!important;grid-template-columns:minmax(0,7fr) minmax(0,5fr);align-items:end}
+  body.life .story-page .mz-next .img{aspect-ratio:auto!important;height:70svh}
+  body.life .story-page .mz-next > .wrap{padding:0}
+  body.life .story-page .mz-nt{text-align:left;padding:56px!important;max-width:none}
+  body.life .story-page .mz-nt .t{font-size:52px;max-width:none}
+
+  /* Startseite Life: Geschichten als Doppelseiten, abwechselnd */
+  html body.life main.karten .col{display:block;max-width:1180px}
+  html body.life main.karten .karte,html body.life main.karten .karte:not(.dunkel),html body.life main.karten .karte:first-child,html body.life main.karten .karte:last-child{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:56px;align-content:start;grid-template-rows:none;aspect-ratio:auto;margin:0 0 140px;padding:0;background:transparent;box-shadow:none;position:static}
+  html body.life main.karten .karte::after{display:none}
+  html body.life main.karten .karte > *{grid-column:2!important;padding:0!important}
+  html body.life main.karten .karte > .k-kopf{grid-column:1/-1!important;grid-row:1!important;margin-bottom:22px;border:0}
+  html body.life main.karten .karte .k-rub{font-size:44px}
+  html body.life main.karten .karte > .k-bild{grid-column:1!important;grid-row:2/span 8!important;align-self:start;margin:0!important;height:auto;aspect-ratio:3/2!important}
+  html body.life main.karten .karte > .k-t{grid-row:2!important;margin-top:0!important;font-size:clamp(40px,3.6vw,58px)!important;line-height:1.04}
+  html body.life main.karten .karte > .k-sub{grid-row:3!important}
+  html body.life main.karten .karte > .k-txt,html body.life main.karten .karte > .k-zit{grid-row:4!important;font-size:19px}
+  html body.life main.karten .karte > .k-fuss{grid-row:5!important;justify-content:flex-start;margin-top:26px}
+  html body.life main.karten .karte:nth-child(even){grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+  html body.life main.karten .karte:nth-child(even) > *{grid-column:1!important}
+  html body.life main.karten .karte:nth-child(even) > .k-kopf{grid-column:1/-1!important}
+  html body.life main.karten .karte:nth-child(even) > .k-bild{grid-column:2!important;aspect-ratio:4/5!important;max-height:80svh}
+  html body.life main.karten .karte.dunkel{margin-left:calc(-1 * max(60px,(100vw - 1180px)/2));margin-right:calc(-1 * max(60px,(100vw - 1180px)/2));padding:72px max(60px,(100vw - 1180px)/2)!important;background:#0a0a0a}
+  html body.life main.karten .karte.dunkel > *{padding:0!important}
+}
+
+/* ===== Life-Beitrag am Desktop wie Nordheide Stories: Bild links bis zum Rand, Kopf rechts, Text darunter (4. November 2026) ===== */
+body.life .mz-kopf .mz-vor{margin:22px 0 0!important;max-width:32em}
+body.life .mz-kopf .mz-by{margin:18px 0 0!important}
+@media (max-width:859px){body.life .mz-kopf{padding-bottom:6px}body.life .mz-kopf + .wrap .st-body{padding-top:28px}}
+@media (min-width:860px){
+  body.life .story-page.has-spread{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr)}
+  body.life .story-page.has-spread > *{grid-column:1/-1}
+  body.life .has-spread > .mz-spread{display:none}
+  body.life .has-spread > .mz-hero{display:block;grid-column:1;grid-row:1;height:100svh;max-height:none;margin:0;position:relative;overflow:hidden}
+  body.life .has-spread > .mz-hero img{width:100%;height:100%;object-fit:cover}
+  body.life .has-spread > .mz-kopf{display:block;grid-column:2;grid-row:1;align-self:center;max-width:none!important;margin:0!important;padding:120px 56px 80px!important;text-align:left}
+  body.life .has-spread > .mz-kopf .sm-kick{font-size:17px}
+  body.life .has-spread > .mz-kopf h1{font-size:clamp(46px,4.4vw,76px)!important;line-height:1.02;letter-spacing:-.015em;font-weight:300}
+  body.life .has-spread > .mz-kopf .sm-sub{margin-top:16px;font-size:18px}
+  body.life .has-spread > .mz-kopf .mz-vor{font-size:21px;line-height:1.5;margin-top:30px!important}
+  body.life .has-spread > .wrap .st-body > *{display:revert}
+  body.life .has-spread > .wrap .st-body > .mz-blick{display:grid}
+  body.life .has-spread > .wrap .st-body{padding-top:96px;max-width:680px;margin:0 auto}
+  body.life .has-spread > .wrap .st-body p{font-size:19px;line-height:1.62}
+  body.life .has-spread .st-quote{margin:72px -140px;text-align:center}
+  body.life .has-spread .st-quote q{font-size:46px;line-height:1.1}
+  body.life .has-spread .mz-zahl{margin:64px -140px!important}
+  body.life .has-spread .mz-zahl .n{font-size:140px}
+  body.life .has-spread .mz-zahl .t{font-size:22px}
+}
+/* lebendig: Bild taucht auf, Kopf steigt hoch */
+@media (prefers-reduced-motion:no-preference){
+  body.life .mz-hero img{animation:life-auf 1.8s cubic-bezier(.2,.6,.2,1) both}
+  body.life .mz-kopf > *{animation:life-hoch 1.1s cubic-bezier(.2,.6,.2,1) both}
+  body.life .mz-kopf h1{animation-delay:.12s}body.life .mz-kopf .sm-sub{animation-delay:.24s}body.life .mz-kopf .mz-vor{animation-delay:.36s}body.life .mz-kopf .mz-by{animation-delay:.48s}
+}
+@keyframes life-auf{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:none}}
+@keyframes life-hoch{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media (min-width:860px){body.life .has-spread .mz-zahl{display:grid!important;grid-template-columns:auto 1fr;column-gap:40px;align-items:end}body.life .has-spread .mz-zahl .t{display:block;max-width:22em;padding-bottom:14px}}
