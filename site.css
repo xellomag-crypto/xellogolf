@@ -1256,3 +1256,37 @@ body.dark .g-sig,body.dark .obj-info,body.objects .obj-info{color:rgba(245,243,2
 @font-face{font-family:'Barlow Condensed';font-style:normal;font-weight:300;font-display:swap;src:url(fonts/barlow-condensed-latin-300-normal.woff2) format('woff2')}
 :root{--narrow:'Barlow Condensed',"Helvetica Neue",Arial,sans-serif}
 .g-sig,.spreads .g-sig{font-family:var(--narrow)!important;font-weight:300!important;font-size:13px!important;letter-spacing:.24em!important}
+
+/* Stories-Übersicht: Doppelseite als Aufmacher mit Titel, Vorspann, Lesezeit (4. November 2026) */
+.g-auf{display:none}
+@media (min-width:860px){
+  .aufmacher .g-piece{grid-template-rows:1fr}
+  .aufmacher .g-line,.aufmacher .g-sig{display:none}
+  .aufmacher .g-auf{display:flex;flex-direction:column;justify-content:center;grid-column:2;grid-row:1;padding:56px 64px}
+  .aufmacher .g-piece:nth-child(even) .g-auf{grid-column:1}
+  .g-auf p{margin:0}
+  .g-auf .k{font-style:italic;font-size:17px;color:var(--green)}
+  .g-auf .t{margin-top:22px;font-weight:300;font-size:clamp(34px,3.1vw,46px);line-height:1.06;letter-spacing:-.01em;text-wrap:balance;color:var(--ink)}
+  .g-auf .sub{margin-top:14px;font-style:italic;font-size:16px;color:var(--soft)}
+  .g-auf .vor{margin-top:24px;font-size:18px;line-height:1.5;color:var(--ink);max-width:28em;text-wrap:pretty}
+  .g-auf .by{display:flex;justify-content:space-between;margin-top:40px;font-family:var(--narrow);font-weight:300;font-size:13px;letter-spacing:.24em;text-transform:lowercase;color:var(--soft)}
+  .g-auf .by span:last-child{font-family:var(--serif);letter-spacing:0;font-size:18px;color:var(--green);transition:transform .3s cubic-bezier(.32,.72,0,1)}
+  .aufmacher .g-piece:hover .g-auf .by span:last-child{transform:translateX(4px)}
+}
+
+/* People-Übersicht: ganzseitige Porträts zu zweit, versetzt (4. November 2026) */
+@media (min-width:860px){
+  .col:has(> .list.gallery.portraits){max-width:1200px}
+  .list.gallery.portraits{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(56px,7vw,110px);max-width:1000px;margin:0 auto;padding-top:40px}
+  .portraits .g-piece{margin:0 0 120px}
+  .portraits .g-piece:nth-child(even){margin-top:180px}
+  .portraits .g-img{max-width:none;width:100%;margin:0;aspect-ratio:4/5;box-sizing:border-box;border:12px solid #FDFCF8;box-shadow:0 1px 2px rgba(5,5,5,.07),0 6px 14px -6px rgba(5,5,5,.14),0 34px 60px -28px rgba(5,5,5,.42)}
+  .portraits .g-line{margin:44px 0 0;max-width:none;text-align:left;font-weight:300;font-size:clamp(24px,2.1vw,30px);line-height:1.28}
+  .portraits .g-sig{text-align:left;margin-top:18px;padding:0}
+  .portraits a.g-img,.portraits a.g-img:active{transform:none!important}
+}
+
+/* Fuß-Zeile wie die Signaturen: schmal, leicht, gesperrt */
+.foot nav a,.foot nav a:not(.crew),.foot nav .crew{font-family:var(--narrow)!important;font-weight:300;font-size:13px;letter-spacing:.24em;text-transform:lowercase}
+.foot nav span,.foot nav .crew + span{font-family:var(--narrow);font-size:13px}
+@media (max-width:859px){.foot nav a,.foot nav a:not(.crew),.foot nav .crew,.foot nav span{font-size:12px;letter-spacing:.16em}.foot nav span,.foot nav .crew + span{margin:0 .55em}}
