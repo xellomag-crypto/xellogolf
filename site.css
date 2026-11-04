@@ -1299,3 +1299,14 @@ body.dark .g-sig,body.dark .obj-info,body.objects .obj-info{color:rgba(245,243,2
 }
 @keyframes welt-raus{to{opacity:0;transform:scale(.985)}}
 @keyframes welt-rein{from{opacity:0;transform:scale(1.015)}}
+
+/* Kopfzeile und Menükopf: mehr Luft nach oben, Wortmarke 5 % größer (4. November 2026) */
+.bar{height:calc(70px + env(safe-area-inset-top,0px));padding-top:calc(12px + env(safe-area-inset-top,0px))}
+.bar .center .w,.menu .top .center .w{width:65px}
+.menu .top{height:70px;padding-top:12px}
+
+/* Menü: Rechtliches wie im Fuß */
+.menu .legal{opacity:1;gap:0;align-items:baseline}
+.menu .legal a{font-family:var(--narrow);font-weight:300;font-size:13px;letter-spacing:.24em;text-transform:lowercase;color:rgba(245,243,237,.72);text-decoration:none}
+.menu .legal a:hover{color:var(--paper)}
+.menu .legal span{font-family:var(--narrow);font-size:13px;margin:0 .9em;color:rgba(245,243,237,.35)}
