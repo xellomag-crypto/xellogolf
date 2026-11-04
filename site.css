@@ -784,3 +784,20 @@ body.life .bar.over,body.life .bar.over.clean{background:transparent}
 body.life .k-kopf,body.life .k-fuss{border-color:rgba(122,61,41,.25)}
 body.life .ph{background:#E6DCCD}
 ::view-transition-group(cover-golf),::view-transition-group(cover-life){animation-duration:.6s;animation-timing-function:cubic-bezier(.32,.72,0,1)}
+
+/* Regal Desktop: zwei Titelseiten (4. November 2026) */
+.h-mast,.h-lines{display:none}
+@media (min-width:860px){
+  .hefte{grid-template-columns:auto auto;justify-content:center;gap:clamp(32px,4vw,64px);max-width:none}
+  .heft{height:calc(100svh - 200px);min-height:540px;max-height:960px;aspect-ratio:4/5;width:auto;container-type:size;box-shadow:0 1px 2px rgba(5,5,5,.08),0 18px 40px -18px rgba(5,5,5,.45)}
+  .heft .h-text{display:none}
+  .heft .h-bild::after{background:linear-gradient(180deg,rgba(5,5,5,.6) 0%,rgba(5,5,5,.2) 28%,rgba(5,5,5,0) 46%,rgba(5,5,5,.08) 62%,rgba(5,5,5,.72) 100%)}
+  .h-mast{display:block;position:absolute;z-index:2;left:0;right:0;top:5cqh;text-align:center}
+  .h-mast .mark.w{display:block;width:78cqw;margin:0 auto}
+  .h-mast .room{display:block;margin-top:.6cqh;font-size:max(12px,2.6cqw);letter-spacing:.6em;margin-right:-.6em;text-transform:uppercase;font-weight:500;text-shadow:0 0 12px rgba(5,5,5,.6)}
+  .h-mast .tag{display:block;margin-top:1.6cqh;font-style:italic;font-weight:500;font-size:max(17px,4.2cqw);text-shadow:0 0 18px rgba(5,5,5,.6),0 1px 6px rgba(5,5,5,.55)}
+  .h-lines{display:grid;gap:2.4cqh;position:absolute;z-index:2;left:6cqw;right:6cqw;bottom:5cqh}
+  .h-lines small{display:block;font-style:italic;font-size:max(13px,2.8cqw);opacity:.9;margin-bottom:.4cqh}
+  .h-lines b{display:block;font-weight:300;font-style:italic;font-size:max(20px,5.6cqw);line-height:1.15}
+  .h-lines .l2 b{font-size:max(16px,3.8cqw)}
+}
