@@ -754,3 +754,33 @@ body.dark .sub-mast:has(h1.thought) .sm-kick{color:rgba(245,243,237,.72)}
   .karte{margin-bottom:110px}
   .karte.dunkel{margin-left:-60px;margin-right:-60px;padding:44px 60px}
 }
+/* ===== Regal xello.de (4. November 2026): zwei Hefte, kein eigenes Titelbild ===== */
+.regal-bar{background:transparent!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.regal{padding-top:calc(54px + env(safe-area-inset-top,0px))}
+.regal-kopf{text-align:center;color:var(--green);padding:0 var(--gr) 18px var(--gl)}
+.regal-kopf .mark.w{display:block;width:120px;margin:0 auto}
+.regal-kopf .tag{display:block;margin-top:6px;font-style:italic;font-size:17px;color:var(--soft)}
+.hefte{display:grid;gap:10px;padding:0 var(--gr) 10px var(--gl)}
+.heft{position:relative;display:block;height:max(250px,calc((100svh - 196px - env(safe-area-inset-top,0px)) / 2));overflow:hidden;color:var(--paper);background:#1d1c19}
+.h-bild,.h-bild img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.h-bild::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,5,5,.5) 0%,rgba(5,5,5,0) 55%)}
+.h-text{position:absolute;left:18px;right:18px;bottom:16px;z-index:2;display:flex;flex-wrap:wrap;align-items:baseline;column-gap:8px}
+.h-text .mark.w{width:74px;display:block}
+.h-text .room{font-size:22px;font-weight:400}
+.h-text .s{flex-basis:100%;margin-top:4px;font-style:italic;font-size:19px}
+@media (prefers-reduced-motion:no-preference){.heft .h-bild img{transition:transform 1.2s cubic-bezier(.2,.6,.2,1)}.heft:hover .h-bild img{transform:scale(1.02)}}
+@media (min-width:860px){
+  .regal-kopf{padding-top:10px;padding-bottom:26px}.regal-kopf .mark.w{width:150px}
+  .hefte{grid-template-columns:1fr 1fr;gap:16px;max-width:1400px;margin:0 auto;padding-bottom:16px}
+  .heft{height:calc(100vh - 210px);min-height:520px}
+  .h-text{left:28px;bottom:26px}.h-text .mark.w{width:96px}.h-text .room{font-size:26px}.h-text .s{font-size:22px}
+}
+.regal-page .foot{margin-top:60px}
+/* ===== Xello Life: eigenes Gesicht, gleicher Charakter ===== */
+body.life{--green:#7A3D29;--paper:#F3ECE1;background:var(--paper)}
+html:has(body.life){background:#F3ECE1}
+body.life .bar,body.life .bar.clean{background:rgba(243,236,225,.94)}
+body.life .bar.over,body.life .bar.over.clean{background:transparent}
+body.life .k-kopf,body.life .k-fuss{border-color:rgba(122,61,41,.25)}
+body.life .ph{background:#E6DCCD}
+::view-transition-group(cover-golf),::view-transition-group(cover-life){animation-duration:.6s;animation-timing-function:cubic-bezier(.32,.72,0,1)}
