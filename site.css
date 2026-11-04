@@ -1360,3 +1360,17 @@ body.dark .bar:not(.over):not(.clean){background:rgba(8,8,8,.94);box-shadow:0 1p
   .voice2 blockquote,.voice2 q,.voice2 cite{text-align:left}
 }
 @media (max-width:859px){.voice2{padding:52px 0 64px}.voice2 .round{margin-bottom:30px;width:40%}}
+
+/* Auf einen Blick feiner; Places am Handy zentriert (4. November 2026) */
+.mz-blick dd{font-weight:300;font-size:16px;line-height:1.35}
+.mz-blick dt:not(.h){font-family:var(--narrow);font-weight:300;font-size:11.5px;letter-spacing:.2em;text-transform:lowercase;color:var(--soft)}
+@media (max-width:859px){
+  .story-page:has(.voice2) .mz-kopf{text-align:center}
+  .story-page:has(.voice2) .voice2{text-align:center;justify-items:center}
+  .story-page:has(.voice2) .voice2 .round{margin-left:auto;margin-right:auto}
+  .story-page:has(.voice2) .voice2 blockquote,.story-page:has(.voice2) .voice2 q,.story-page:has(.voice2) .voice2 cite{text-align:center}
+  .story-page:has(.voice2) .st-big{text-align:center}
+  .story-page:has(.voice2) .mz-blick{text-align:center}
+  .story-page:has(.voice2) .mz-blick dt.h{grid-column:1/-1}
+}
+@media (max-width:859px){.story-page:has(.voice2) .mz-blick{grid-template-columns:1fr;row-gap:2px}.story-page:has(.voice2) .mz-blick > div{margin-bottom:12px}}
