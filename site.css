@@ -725,3 +725,32 @@ body.dark .sub-mast:has(h1.thought) .sm-kick{color:rgba(245,243,237,.72)}
 .bar.over,.bar.over.clean{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
 .bar.over.clean .center,.bar.over.clean .side.l{opacity:0;pointer-events:none}
 @media (min-width:860px){.st-hero.mz-hero img{object-position:55% 8%}}
+/* Golf-Startseite: Story-Karten (Magazin-Charakter, 4. November 2026) */
+.karten{padding-top:56px}
+.karte{display:block;text-decoration:none;color:var(--ink);margin:0 0 76px}
+.k-kopf{display:flex;justify-content:space-between;align-items:baseline;gap:14px;border-top:1px solid rgba(8,45,37,.22);padding-top:12px}
+.k-rub{font-style:italic;font-size:24px;color:var(--green)}
+.k-ort{font-style:italic;font-size:14px;color:var(--soft);text-align:right}
+.k-bild{display:block;margin:14px 0 18px;overflow:hidden;background:#1d1c19}
+.k-bild.r45{aspect-ratio:4/5}.k-bild.r32{aspect-ratio:3/2}
+.k-bild img,.k-bild video{width:100%;height:100%;object-fit:cover;display:block}
+.k-t{display:block;font-weight:300;font-size:clamp(28px,7.6vw,44px);line-height:1.06;letter-spacing:-.01em;text-wrap:balance}
+.k-sub{display:block;margin-top:8px;font-style:italic;font-size:17px;color:var(--soft)}
+.k-txt{display:block;margin-top:14px;font-size:18px;line-height:1.55}
+.k-zit{display:block;margin-top:18px;font-style:italic;font-size:22px;line-height:1.35;color:var(--green)}
+.k-cite{display:block;margin-top:6px;font-style:normal;font-size:13px;color:#6f6b64}
+.k-fuss{display:flex;justify-content:space-between;align-items:center;margin-top:20px;padding-top:12px;border-top:1px solid rgba(8,45,37,.22);font-style:italic;font-size:16px;color:var(--green)}
+.k-fuss span:last-child{font-style:normal;font-size:18px;transition:transform .3s cubic-bezier(.32,.72,0,1)}
+.karte:hover .k-fuss span:last-child{transform:translateX(4px)}
+.karte.dunkel{background:#0a0a0a;color:var(--paper);margin-left:calc(-1 * var(--gl));margin-right:calc(-1 * var(--gr));padding:30px var(--gr) 30px var(--gl)}
+.karte.dunkel .k-kopf,.karte.dunkel .k-fuss{border-color:rgba(245,243,237,.2)}
+.karte.dunkel .k-rub,.karte.dunkel .k-fuss{color:var(--paper)}
+.karte.dunkel .k-sub,.karte.dunkel .k-ort{color:rgba(245,243,237,.6)}
+.karten + .orig,.orig + .karten{margin-top:0}
+.orig + .karten{padding-top:76px}
+@media (prefers-reduced-motion:no-preference){.karte.leise img,.karte.leise video{transform:scale(1.025)}.karte.leise.da img,.karte.leise.da video{transform:scale(1)}}
+@media (min-width:860px){
+  .karten .col{max-width:760px;margin:0 auto}
+  .karte{margin-bottom:110px}
+  .karte.dunkel{margin-left:-60px;margin-right:-60px;padding:44px 60px}
+}
