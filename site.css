@@ -1717,3 +1717,8 @@ main + .toc{display:none}
 .foot .ig svg{width:100%;height:100%;display:block}
 .foot .ig + nav{margin-top:20px}
 @media (max-width:859px){.foot nav{flex-wrap:wrap!important;white-space:normal;row-gap:8px}.foot nav .crew{flex-basis:100%;text-align:center}.foot nav .crew + span{display:none!important}}
+/* Menü: Xello Collective als eigene feine Zeile über dem Rechtlichen (5. November 2026) */
+.menu .menu-crew{display:block;text-align:center;margin:0 0 18px;font-style:italic;font-weight:300;font-size:15px;color:rgba(245,243,237,.88);text-decoration:none}
+.menu .menu-crew:hover{color:#fff}
+@media (min-width:860px){.menu .menu-crew{max-width:520px;width:100%;margin-left:auto;margin-right:auto}}
+@media (max-width:859px){.foot nav{flex-wrap:nowrap!important;white-space:nowrap}}
