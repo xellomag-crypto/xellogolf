@@ -1325,3 +1325,10 @@ body.dark .g-sig,body.dark .obj-info,body.objects .obj-info{color:rgba(245,243,2
 .story-page .mz-next{box-shadow:none!important;transform:none!important}
 @media (min-width:860px){.story-page .mz-nt{padding-bottom:88px}.story-page:has(.mz-next) ~ .foot{padding-top:80px}}
 @media (max-width:859px){.mz-nt{padding-bottom:64px}.story-page:has(.mz-next) ~ .foot{padding-top:64px}}
+
+/* Kopfzeile beim Scrollen: höher, klar erkennbar; Wortmarke führt zur Startseite (4. November 2026) */
+.bar{transition:transform .45s cubic-bezier(.32,.72,0,1),height .35s cubic-bezier(.32,.72,0,1),padding .35s,background .4s,color .4s,box-shadow .4s}
+.bar:not(.over):not(.clean){height:calc(84px + env(safe-area-inset-top,0px));padding-top:calc(14px + env(safe-area-inset-top,0px));background:rgba(245,243,237,.96);box-shadow:0 1px 0 rgba(8,45,37,.12),0 10px 24px -18px rgba(5,5,5,.35)}
+body.life .bar:not(.over):not(.clean){background:rgba(243,236,225,.96);box-shadow:0 1px 0 rgba(122,61,41,.15),0 10px 24px -18px rgba(5,5,5,.35)}
+body.dark .bar:not(.over):not(.clean){background:rgba(8,8,8,.94);box-shadow:0 1px 0 rgba(245,243,237,.1)}
+.bar:not(.over):not(.clean) .center .w{width:72px}
