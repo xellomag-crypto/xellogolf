@@ -1702,3 +1702,12 @@ main + .toc{display:none}
 }
 @media (max-width:859px){.foot .x,.foot a.mark.x{width:26px}}
 @media (max-width:859px){.foot .x,.foot a.mark.x{width:22px}}
+
+/* People-Übersicht: Porträts nebeneinander, nicht versetzt, Abstand zur Kopfzeile (5. November 2026) */
+.list.gallery.portraits{padding-top:calc(96px + env(safe-area-inset-top,0px))!important}
+@media (min-width:860px){
+  .list.gallery.portraits{padding-top:120px!important}
+  .portraits .g-piece:nth-child(even){margin-top:0!important}
+  .portraits .g-piece:nth-child(-n+4){margin-bottom:90px}
+}
+@media (min-width:860px){.portraits .g-kick.k1{display:none!important}}
