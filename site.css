@@ -1374,3 +1374,4 @@ body.dark .bar:not(.over):not(.clean){background:rgba(8,8,8,.94);box-shadow:0 1p
   .story-page:has(.voice2) .mz-blick dt.h{grid-column:1/-1}
 }
 @media (max-width:859px){.story-page:has(.voice2) .mz-blick{grid-template-columns:1fr;row-gap:2px}.story-page:has(.voice2) .mz-blick > div{margin-bottom:12px}}
+.foot .x,.foot a.mark.x{width:36px}
