@@ -1716,3 +1716,4 @@ main + .toc{display:none}
 .foot .ig:hover{color:#fff}
 .foot .ig svg{width:100%;height:100%;display:block}
 .foot .ig + nav{margin-top:20px}
+@media (max-width:859px){.foot nav{flex-wrap:wrap!important;white-space:normal;row-gap:8px}.foot nav .crew{flex-basis:100%;text-align:center}.foot nav .crew + span{display:none!important}}
