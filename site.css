@@ -777,11 +777,11 @@ body.dark .sub-mast:has(h1.thought) .sm-kick{color:rgba(245,243,237,.72)}
 }
 .regal-page .foot{margin-top:60px}
 /* ===== Xello Life: eigenes Gesicht, gleicher Charakter ===== */
-body.life{--green:#7A3D29;--paper:#F3ECE1;background:var(--paper)}
-html:has(body.life){background:#F3ECE1}
-body.life .bar,body.life .bar.clean{background:rgba(243,236,225,.94)}
+body.life{--green:#2A2826;--paper:#F4F2EE;background:var(--paper)}
+html:has(body.life){background:#F4F2EE}
+body.life .bar,body.life .bar.clean{background:rgba(244,242,238,.94)}
 body.life .bar.over,body.life .bar.over.clean{background:transparent}
-body.life .k-kopf,body.life .k-fuss{border-color:rgba(122,61,41,.25)}
+body.life .k-kopf,body.life .k-fuss{border-color:rgba(42,40,38,.25)}
 body.life .ph{background:#E6DCCD}
 ::view-transition-group(cover-golf),::view-transition-group(cover-life){animation-duration:.6s;animation-timing-function:cubic-bezier(.32,.72,0,1)}
 
@@ -1006,7 +1006,7 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   body.life .karte:not(.dunkel):first-child .k-zit{grid-row:6}
   body.life .karte:not(.dunkel):first-child .k-fuss{grid-row:8}
 }
-@media (min-width:860px){body.life .karte:not(.dunkel){background:#FBF8F2}}
+@media (min-width:860px){body.life .karte:not(.dunkel){background:#FCFBF9}}
 
 /* Beitrag am Desktop: Einstieg als aufgeschlagene Doppelseite (4. November 2026) */
 .mz-spread{display:none}
@@ -1015,7 +1015,7 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .has-spread > .wrap .st-body{padding-top:0}
   .has-spread .mz-blick{margin-top:64px}
   .mz-spread{display:grid;grid-template-columns:1fr 1fr;position:relative;max-width:1200px;margin:96px auto 80px;min-height:min(calc(100vh - 150px),760px);background:#FCFBF7;box-shadow:0 1px 2px rgba(5,5,5,.06),0 24px 48px -26px rgba(5,5,5,.36)}
-  body.life .mz-spread{background:#FBF8F2}
+  body.life .mz-spread{background:#FCFBF9}
   .mz-spread::after{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 40px);width:80px;pointer-events:none;background:linear-gradient(90deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.07) 46%,rgba(5,5,5,.16) 50%,rgba(255,255,255,.18) 51%,rgba(5,5,5,.05) 56%,rgba(5,5,5,0) 100%)}
   .sp-bild{position:relative;overflow:hidden}
   .sp-bild img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -1040,7 +1040,7 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .has-spread .mz-strecke{background:transparent;color:var(--ink);padding:0;margin:0 auto 24px;max-width:1200px}
   .has-spread .mz-strecke > .wrap{display:none}
   .has-spread .mz-strecke .mz-track{position:relative;display:grid!important;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:0;overflow:visible;max-width:1200px;margin:0 auto;padding:0!important;min-height:min(calc(100vh - 150px),760px);background:#FCFBF7;box-shadow:0 1px 2px rgba(5,5,5,.06),0 24px 48px -26px rgba(5,5,5,.36);scroll-snap-type:none}
-  body.life.has-spread .mz-strecke .mz-track,body.life .has-spread .mz-strecke .mz-track{background:#FBF8F2}
+  body.life.has-spread .mz-strecke .mz-track,body.life .has-spread .mz-strecke .mz-track{background:#FCFBF9}
   .has-spread .mz-strecke .mz-track::after{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 40px);width:80px;pointer-events:none;z-index:2;background:linear-gradient(90deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.07) 46%,rgba(5,5,5,.16) 50%,rgba(255,255,255,.18) 51%,rgba(5,5,5,.05) 56%,rgba(5,5,5,0) 100%)}
   .has-spread .mz-strecke .mz-track figure{flex:none!important;width:auto!important;max-width:none!important;margin:0;transform:none!important;opacity:1!important;display:flex;flex-direction:column}
   .has-spread .mz-strecke .mz-track figure:first-child{grid-column:1;grid-row:1/3;position:relative}
@@ -1187,7 +1187,7 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
 /* Nächste Story am Desktop: kleine Vorschau-Doppelseite auf Papier statt schwarzem Balken (4. November 2026) */
 @media (min-width:860px){
   .story-page .mz-next{position:relative;display:grid;grid-template-columns:1fr 1fr;max-width:1200px;height:clamp(300px,26vw,380px);margin:96px auto 0;background:#FCFBF7;color:var(--ink);box-shadow:0 1px 2px rgba(5,5,5,.06),0 24px 48px -26px rgba(5,5,5,.36);transition:transform .5s cubic-bezier(.32,.72,0,1),box-shadow .5s}
-  body.life .story-page .mz-next{background:#FBF8F2}
+  body.life .story-page .mz-next{background:#FCFBF9}
   .story-page .mz-next::after{content:"";position:absolute;top:0;bottom:0;left:calc(50% - 40px);width:80px;pointer-events:none;z-index:3;background:linear-gradient(90deg,rgba(5,5,5,0) 0%,rgba(5,5,5,.07) 46%,rgba(5,5,5,.16) 50%,rgba(255,255,255,.18) 51%,rgba(5,5,5,.05) 56%,rgba(5,5,5,0) 100%)}
   .story-page .mz-next:hover{transform:translateY(-3px);box-shadow:0 1px 2px rgba(5,5,5,.06),0 30px 56px -26px rgba(5,5,5,.42)}
   .story-page .mz-next .img{position:static;aspect-ratio:auto;height:100%}
@@ -1329,7 +1329,7 @@ body.dark .g-sig,body.dark .obj-info,body.objects .obj-info{color:rgba(245,243,2
 /* Kopfzeile beim Scrollen: höher, klar erkennbar; Wortmarke führt zur Startseite (4. November 2026) */
 .bar{transition:transform .45s cubic-bezier(.32,.72,0,1),height .35s cubic-bezier(.32,.72,0,1),padding .35s,background .4s,color .4s,box-shadow .4s}
 .bar:not(.over):not(.clean){height:calc(84px + env(safe-area-inset-top,0px));padding-top:calc(14px + env(safe-area-inset-top,0px));background:rgba(245,243,237,.96);box-shadow:0 1px 0 rgba(8,45,37,.12),0 10px 24px -18px rgba(5,5,5,.35)}
-body.life .bar:not(.over):not(.clean){background:rgba(243,236,225,.96);box-shadow:0 1px 0 rgba(122,61,41,.15),0 10px 24px -18px rgba(5,5,5,.35)}
+body.life .bar:not(.over):not(.clean){background:rgba(244,242,238,.96);box-shadow:0 1px 0 rgba(42,40,38,.15),0 10px 24px -18px rgba(5,5,5,.35)}
 body.dark .bar:not(.over):not(.clean){background:rgba(8,8,8,.94);box-shadow:0 1px 0 rgba(245,243,237,.1)}
 .bar:not(.over):not(.clean) .center .w{width:72px}
 
@@ -1462,7 +1462,7 @@ body.dark .g-sig,body.objects .obj-info,body.dark .obj-info{color:rgba(245,243,2
 @media (max-width:859px){
   body.golf-home .karten .col,body.life .karten .col{padding-top:6px}
   body.golf-home .karte:not(.dunkel),body.life .karte:not(.dunkel){background:#FCFBF7;margin:0 0 34px;padding:22px 20px 18px;box-shadow:0 1px 2px rgba(5,5,5,.06),0 16px 30px -18px rgba(5,5,5,.3)}
-  body.life .karte:not(.dunkel){background:#FBF8F2}
+  body.life .karte:not(.dunkel){background:#FCFBF9}
   body.golf-home .karte:not(.dunkel) .k-kopf,body.life .karte:not(.dunkel) .k-kopf{justify-content:center}
   body.golf-home .karte:not(.dunkel) .k-rub,body.life .karte:not(.dunkel) .k-rub{font-size:16px}
   body.golf-home .karte:not(.dunkel) .k-ort:empty,body.life .karte:not(.dunkel) .k-ort:empty{display:none}
@@ -1581,3 +1581,8 @@ body.life .mz-kopf .mz-by{margin:18px 0 0!important}
 @keyframes life-auf{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:none}}
 @keyframes life-hoch{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @media (min-width:860px){body.life .has-spread .mz-zahl{display:grid!important;grid-template-columns:auto 1fr;column-gap:40px;align-items:end}body.life .has-spread .mz-zahl .t{display:block;max-width:22em;padding-bottom:14px}}
+
+/* Life in Graphit: Farbe tritt zurück, Bilder vorn; Wortmarke schwarz und am Desktop größer (4. November 2026) */
+body.life{--soft:#625e58}
+body.life .bar .center,body.life .bar:not(.over) .center{color:#151413}
+@media (min-width:860px){body.life .bar .center .w{width:80px!important}body.life .bar .center .room{font-size:9.5px}}
