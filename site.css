@@ -1752,3 +1752,7 @@ body.life .menu .close,body.life .menu .top .center,body.life .menu .other{color
 /* X wieder ein paar Pixel höher */
 .foot nav{margin-top:18px!important}
 @media (max-width:859px){.foot nav{margin-top:16px!important}}
+/* Golf-Menü optisch an Life angleichen: helle Schrift auf Dunkel wirkt größer (5. November 2026) */
+body:not(.life) .menu li .t{color:rgba(245,243,237,.9)}
+@media (max-width:859px){body:not(.life) .menu li .t,body:not(.life) .menu li .t:not(.name){font-size:19px!important;letter-spacing:.015em}}
+@media (min-width:860px){body:not(.life) .menu li .t,body:not(.life) .menu li .t:not(.name){font-size:25px!important;letter-spacing:.015em}}
