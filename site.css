@@ -801,3 +801,20 @@ body.life .ph{background:#E6DCCD}
   .h-lines b{display:block;font-weight:300;font-style:italic;font-size:max(20px,5.6cqw);line-height:1.15}
   .h-lines .l2 b{font-size:max(16px,3.8cqw)}
 }
+
+/* Life am Desktop: Cover als Titelseite im Hochformat (4. November 2026) */
+@media (min-width:860px){
+  body.life .cover{height:calc(100svh - 150px);min-height:560px;max-height:1000px;aspect-ratio:4/5;width:auto;margin:92px auto 0;container-type:size;box-shadow:0 1px 2px rgba(5,5,5,.08),0 18px 40px -18px rgba(5,5,5,.45)}
+  body.life .cover .mast{top:5cqh}
+  body.life .cover .mast .w{width:78cqw;max-width:none}
+  body.life .cover .mast .room{font-size:max(12px,2.6cqw)}
+  body.life .cover .mast .tag{font-size:max(18px,4.4cqw);margin-top:1.6cqh}
+  body.life .cover .lines{left:6cqw;right:6cqw;bottom:5cqh;grid-template-columns:1fr;gap:2.4cqh}
+  body.life .cover .lines .l2{text-align:left}
+  body.life .cover .lines small{font-size:max(13px,2.8cqw)}
+  body.life .cover .lines b{font-size:max(22px,5.8cqw)}
+  body.life .cover .lines .l2 b{font-size:max(17px,4cqw)}
+  body.life .bar.over{color:var(--green)}
+  body.life .bar.over .burger{color:var(--green);filter:none}
+  body.life .cover + main{margin-top:40px}
+}
