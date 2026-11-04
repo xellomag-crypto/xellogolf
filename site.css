@@ -1152,3 +1152,27 @@ body:not(.life) .foot,body:not(.life) .menu{background:#041E18}
   .spreads .g-line{text-indent:0;padding-left:64px}
   .spreads #isa-gashi .g-line{text-indent:-.42em;padding-left:calc(64px + .42em)}
 }
+
+/* Bildstrecke am Desktop: ein Bild nach dem anderen, zum Durchklicken, ruhig auf Papier (4. November 2026) */
+@media (min-width:860px){
+  .has-spread .mz-strecke{max-width:860px;margin:8px auto 24px;padding:0 0 0;background:transparent}
+  .has-spread .mz-strecke > .wrap{display:block;padding:0}
+  .has-spread .mz-strecke .mz-sk,.has-spread .mz-strecke .mz-sf{max-width:none;margin-left:0;margin-right:0;color:var(--soft)}
+  .has-spread .mz-strecke .mz-sk{font-family:var(--sans);font-style:normal;font-size:11.5px;letter-spacing:.08em;margin-bottom:14px}
+  .has-spread .mz-strecke .mz-sk b{color:var(--ink);font-weight:400}
+  .has-spread .mz-strecke .mz-sf{display:flex!important;margin-top:16px}
+  .has-spread .mz-strecke .mz-dots i{background:rgba(5,5,5,.18)}
+  .has-spread .mz-strecke .mz-dots i.on{background:var(--ink)}
+  .has-spread .mz-strecke .mz-arr button{color:var(--ink);border-color:rgba(5,5,5,.22);background:transparent}
+  .has-spread .mz-strecke .mz-arr button:hover{border-color:var(--ink)}
+  .has-spread .mz-strecke .mz-track{display:flex!important;grid-template-columns:none;min-height:0;max-width:none;gap:0;padding:0!important;overflow-x:auto;scroll-snap-type:x mandatory;background:transparent!important;box-shadow:none;scrollbar-width:none}
+  .has-spread .mz-strecke .mz-track::after{display:none}
+  .has-spread .mz-strecke .mz-track figure,.has-spread .mz-strecke .mz-track figure:nth-child(n){flex:0 0 100%!important;display:block!important;position:static;padding:0!important;grid-column:auto;grid-row:auto;scroll-snap-align:start}
+  .has-spread .mz-strecke .mz-track figure .f,.has-spread .mz-strecke .mz-track figure:first-child .f,.has-spread .mz-strecke .mz-track figure:nth-child(n+2) .f{position:relative;inset:auto;aspect-ratio:3/2!important;height:auto;box-shadow:0 1px 2px rgba(5,5,5,.06),0 18px 36px -22px rgba(5,5,5,.32)}
+  .has-spread .mz-strecke .mz-track figcaption,.has-spread .mz-strecke .mz-track figure:first-child figcaption{position:static;margin-top:14px;color:var(--soft);text-shadow:none;font-size:14px}
+}
+@media (min-width:860px){
+  .has-spread .mz-strecke{max-width:760px}
+  .has-spread .mz-strecke .mz-cnt{color:var(--soft)!important;font-family:var(--sans);font-size:11.5px;letter-spacing:.08em}
+  .has-spread .mz-strecke .mz-cnt b{color:var(--ink)!important}
+}
