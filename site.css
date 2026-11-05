@@ -1773,3 +1773,6 @@ body.film-page,body:has(.fp-hero){background:#000}
   .menu li a{padding:12px 0!important}
 }
 .fp-hero.spielt{aspect-ratio:2560/1090!important}.vlayer .vframe{aspect-ratio:2560/1090!important}
+
+/* Wortmarke xello golf / xello life in der Kopfzeile 10 % größer (5. November 2026) */
+.bar .center,.menu .top .center{scale:1.1}
