@@ -1772,3 +1772,4 @@ body.film-page,body:has(.fp-hero){background:#000}
   body:not(.life) .menu li .t,body:not(.life) .menu li .t:not(.name){font-size:21px!important}
   .menu li a{padding:12px 0!important}
 }
+.fp-hero.spielt{aspect-ratio:2560/1090!important}.vlayer .vframe{aspect-ratio:2560/1090!important}
