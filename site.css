@@ -1761,3 +1761,6 @@ body:not(.life) .menu li .t{color:rgba(245,243,237,.9)}
 body.film-page,body:has(.fp-hero){background:#000}
 .fp-hero.spielt{box-shadow:none!important;border:0!important}
 .fp-hero.spielt iframe,.vlayer .vframe iframe{background:#000}
+/* Film im Kinoformat (≈2,35:1): Rahmen passt exakt, keine Balken (5. November 2026) */
+.fp-hero.spielt{aspect-ratio:2.34/1!important;max-height:none}
+.vlayer .vframe{aspect-ratio:2.34/1!important;max-width:min(100vw,234svh)!important}
