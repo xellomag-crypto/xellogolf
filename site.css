@@ -1845,3 +1845,25 @@ body.life .mz-archiv::before,body.life .sp-archiv::before{color:#7A3D29}
 .ar-head h1{font-style:italic;font-weight:300;color:#7A3D29;margin:6px 0 0}
 .ar-head .sm-kick{display:none}
 .ar-head,.ar-head h1{text-align:center}
+
+/* Archiv nach Jahren (5. November 2026, ohne Cover) */
+.ar-jn{display:flex;justify-content:center;gap:14px;margin:18px 0 0;font-style:italic;font-size:18px}
+.ar-jn a{color:#7A3D29;text-decoration:none}.ar-jn span{color:#b5aea4}
+.ar-sec{border-top:1px solid var(--ink)}
+.ar-jahr{margin:0 0 18px;font-weight:300;font-size:clamp(72px,18vw,150px);line-height:.95;letter-spacing:-.03em;color:#7A3D29}
+@media (min-width:860px){
+  .col.ar{max-width:1180px}
+  .ar-head .ar-lead{font-size:20px;max-width:640px}
+  .ar-head h1{font-size:clamp(48px,5vw,72px)}
+  .ar-jn{font-size:24px;gap:20px}
+  .ar-list{display:grid;grid-template-columns:1fr 1fr;column-gap:56px;row-gap:46px}
+  .ar-list li{border:0}
+  .ar-list a{flex-direction:column;align-items:stretch;gap:16px;padding:0}
+  .ar-i-bild{flex:none;aspect-ratio:3/2;width:100%}
+  .ar-i-r{font-size:15px}
+  .ar-i-t{font-size:32px;font-weight:300;line-height:1.15}
+  .ar-i-s{font-size:16px}
+  .ar-jahr{font-size:200px;margin-bottom:30px}
+  .ar-sec{margin-top:110px}
+}
+.ar-i-bild img{object-position:50% 22%}
