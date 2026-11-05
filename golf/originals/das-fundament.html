@@ -35,7 +35,7 @@
   var h=document.querySelector('.fp-hero'),L=document.getElementById('vlayer'),box=L.querySelector('.vframe');
   function go(){var id=h.getAttribute('data-vimeo');
     if(!id)return;
-    var f='<iframe src="https://player.vimeo.com/video/'+id+'?autoplay=1&quality=2k&title=0&byline=0&portrait=0&dnt=1&color=F5F3ED" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Das Fundament"></iframe>';
+    var f='<iframe src="https://player.vimeo.com/video/'+id+'?autoplay=1&quality='+(matchMedia('(min-width:860px)').matches?'2k':'1080p')+'&title=0&byline=0&portrait=0&dnt=1&color=F5F3ED" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Das Fundament"></iframe>';
     if(window.matchMedia('(min-width:860px)').matches){h.classList.add('spielt');h.insertAdjacentHTML('beforeend',f);h.scrollIntoView({behavior:'smooth',block:'center'});return}
     box.innerHTML=f;L.hidden=false;document.body.style.overflow='hidden'}
   h.querySelector('.fp-big').addEventListener('click',go);
