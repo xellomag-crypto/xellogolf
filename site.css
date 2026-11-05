@@ -1764,3 +1764,11 @@ body.film-page,body:has(.fp-hero){background:#000}
 /* Film im Kinoformat (≈2,35:1): Rahmen passt exakt, keine Balken (5. November 2026) */
 .fp-hero.spielt{aspect-ratio:2.34/1!important;max-height:none}
 .vlayer .vframe{aspect-ratio:2.34/1!important;max-width:min(100vw,234svh)!important}
+/* Film mit Luft zur Kopfzeile; Desktop-Menü kleiner (5. November 2026) */
+.film-page .fp-hero{margin-top:36px}
+@media (min-width:860px){
+  .film-page .fp-hero{margin-top:72px}
+  .menu li .t,.menu li .t:not(.name){font-size:22px!important}
+  body:not(.life) .menu li .t,body:not(.life) .menu li .t:not(.name){font-size:21px!important}
+  .menu li a{padding:12px 0!important}
+}
