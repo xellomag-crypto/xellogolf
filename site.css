@@ -1788,3 +1788,60 @@ body.film-page,body:has(.fp-hero){background:#000}
 .mz-archiv,.sp-archiv{margin:14px 0 0;padding:9px 0 0;border-top:1px solid rgba(8,45,37,.18);font-size:13.5px;line-height:1.45;color:#6f6b64;font-style:italic}
 .mz-archiv::before,.sp-archiv::before{content:"Archiv";font-style:normal;letter-spacing:.14em;text-transform:uppercase;font-size:10.5px;color:var(--green);margin-right:.8em}
 body.life .mz-archiv::before,body.life .sp-archiv::before{color:#7A3D29}
+
+/* ===== Archiv (5. November 2026) ===== */
+/* Archivkarten: Heftstempel, Jahreszahl, warmer Papierton */
+.karte.archiv{position:relative}
+.karte.archiv .k-heft{display:flex;align-items:center;gap:10px;font-style:italic;font-size:13.5px;color:#6f6b64}
+.karte.archiv .k-mini{display:block;width:26px;flex:0 0 26px;aspect-ratio:3/4.2;overflow:hidden;box-shadow:0 1px 2px rgba(5,5,5,.18),0 4px 10px -4px rgba(5,5,5,.35);transform:rotate(-3deg);background:#7A3D29}
+.karte.archiv .k-mini img{width:100%;height:100%;object-fit:cover;display:block}
+.karte.archiv .k-mini.ar-cov-leer{display:grid;place-items:center;color:#F3ECE1}
+.karte.archiv .k-mini.ar-cov-leer .mark{width:14px}.karte.archiv .k-mini .ar-cov-t{display:none}
+.karte.archiv .k-jahr{position:absolute;right:14px;bottom:10px;z-index:2;font-size:46px;line-height:1;font-weight:300;letter-spacing:-.02em;color:rgba(245,243,237,.92);text-shadow:0 1px 12px rgba(5,5,5,.35);pointer-events:none}
+.karte.archiv .k-bild{position:relative}
+.karte.archiv .k-bild img{filter:sepia(.16) saturate(.92)}
+.karte.archiv.dunkel .k-heft{color:rgba(245,243,237,.78)}
+@media (min-width:860px){.karte.archiv .k-jahr{font-size:60px;right:20px;bottom:14px}}
+/* Tür zum Archiv */
+.ar-door{display:flex;align-items:baseline;gap:16px;margin-top:64px;padding:26px 0;border-top:1px solid rgba(8,45,37,.25);border-bottom:1px solid rgba(8,45,37,.25);color:inherit;text-decoration:none}
+.ar-door .ar-d-k{font-style:italic;font-size:26px;color:#7A3D29}
+.ar-door .ar-d-t{flex:1;font-size:16px;color:#6f6b64;font-style:italic}
+/* Archivseite */
+.ar-lead{max-width:560px;margin:14px auto 0;font-style:italic;color:#6f6b64;font-size:17px;line-height:1.5}
+.ar-regal{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:10px 4px 26px;margin:0 calc(-1 * var(--gr)) 0 calc(-1 * var(--gl));padding-left:var(--gl);padding-right:var(--gr)}
+.ar-heft{flex:0 0 46%;max-width:220px;scroll-snap-align:start;color:inherit;text-decoration:none;text-align:center}
+.ar-cov{display:block;aspect-ratio:3/4.2;overflow:hidden;background:#7A3D29;box-shadow:0 1px 2px rgba(5,5,5,.1),0 16px 30px -16px rgba(5,5,5,.45)}
+.ar-cov img{width:100%;height:100%;object-fit:cover;display:block}
+.ar-cov-leer{display:grid;place-items:center;align-content:center;gap:14px;color:#F3ECE1}
+.ar-cov-leer .mark{width:42%;display:block}
+.ar-cov-leer .ar-cov-t{font-style:italic;font-size:15px}
+.ar-heft:nth-child(odd) .ar-cov{transform:rotate(-1.2deg)}.ar-heft:nth-child(even) .ar-cov{transform:rotate(1deg)}
+.ar-h-t{display:block;margin-top:16px;font-style:italic;font-size:18px}
+.ar-h-n{display:block;font-size:13px;color:#6f6b64;margin-top:2px}
+.ar-sec{margin-top:64px;padding-top:22px;border-top:1px solid var(--ink);scroll-margin-top:80px}
+.ar-sec-k{display:flex;align-items:center;gap:18px;margin-bottom:24px}
+.ar-cov-s{width:64px;flex:0 0 64px;transform:rotate(-2deg)}
+.ar-cov-s.ar-cov-leer .ar-cov-t{display:none}
+.ar-sec-kick{margin:0;font-size:13px;color:#6f6b64;font-style:italic}
+.ar-sec h2{margin:2px 0 0;font-weight:300;font-style:italic;font-size:30px;color:#7A3D29}
+.ar-list{list-style:none;margin:0;padding:0}
+.ar-list li{border-bottom:1px solid rgba(8,45,37,.15)}
+.ar-list a{display:flex;gap:16px;align-items:center;padding:14px 0;color:inherit;text-decoration:none}
+.ar-i-bild{flex:0 0 96px;aspect-ratio:4/3;overflow:hidden;background:#ddd}
+.ar-i-bild img{width:100%;height:100%;object-fit:cover;display:block;filter:sepia(.16) saturate(.92)}
+.ar-i-txt{display:flex;flex-direction:column}
+.ar-i-r{font-size:12.5px;font-style:italic;color:#7A3D29}
+.ar-i-t{font-size:20px;line-height:1.25;margin-top:2px}
+.ar-i-s{font-size:14px;font-style:italic;color:#6f6b64;margin-top:3px}
+.ar-list a:hover .ar-i-t{color:#7A3D29}
+@media (min-width:860px){
+  .ar-regal{justify-content:center;overflow:visible;margin:24px 0 0;padding:10px 0 30px;gap:34px}
+  .ar-heft{flex:0 0 170px}
+  .ar-i-bild{flex-basis:160px}
+  .ar-i-t{font-size:24px}
+}
+
+.ar-head{padding-top:calc(96px + env(safe-area-inset-top,0px))}
+.ar-head h1{font-style:italic;font-weight:300;color:#7A3D29;margin:6px 0 0}
+.ar-head .sm-kick{display:none}
+.ar-head,.ar-head h1{text-align:center}
