@@ -1781,3 +1781,5 @@ body.film-page,body:has(.fp-hero){background:#000}
 .karte.dunkel .k-zit{color:rgba(245,243,237,.92)}
 .karte.dunkel .k-txt{color:rgba(245,243,237,.82)}
 .karte.dunkel .k-sub,.karte.dunkel .k-ort{color:rgba(245,243,237,.78)}
+.ausheft .ah-unten{margin-top:6px}
+.ausheft .ah-tip{display:block;margin-top:10px;font-style:normal;font-size:13px;color:#6f6b64}
