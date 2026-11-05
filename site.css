@@ -1756,3 +1756,8 @@ body.life .menu .close,body.life .menu .top .center,body.life .menu .other{color
 body:not(.life) .menu li .t{color:rgba(245,243,237,.9)}
 @media (max-width:859px){body:not(.life) .menu li .t,body:not(.life) .menu li .t:not(.name){font-size:19px!important;letter-spacing:.015em}}
 @media (min-width:860px){body:not(.life) .menu li .t,body:not(.life) .menu li .t:not(.name){font-size:25px!important;letter-spacing:.015em}}
+/* Film: nur der Film auf Schwarz, keine grauen Balken (5. November 2026) */
+.fp-hero,.fp-hero.spielt,.vlayer,.vlayer .vframe,.bill-media,.o-media{background:#000!important}
+body.film-page,body:has(.fp-hero){background:#000}
+.fp-hero.spielt{box-shadow:none!important;border:0!important}
+.fp-hero.spielt iframe,.vlayer .vframe iframe{background:#000}
