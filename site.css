@@ -1776,3 +1776,8 @@ body.film-page,body:has(.fp-hero){background:#000}
 
 /* Wortmarke xello golf / xello life in der Kopfzeile 10 % größer (5. November 2026) */
 .bar .center,.menu .top .center{scale:1.1}
+
+/* Dunkle Karten: Zitat, Text und Unterzeile lesbar (5. November 2026) */
+.karte.dunkel .k-zit{color:rgba(245,243,237,.92)}
+.karte.dunkel .k-txt{color:rgba(245,243,237,.82)}
+.karte.dunkel .k-sub,.karte.dunkel .k-ort{color:rgba(245,243,237,.78)}
